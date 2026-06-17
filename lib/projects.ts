@@ -5,6 +5,8 @@ export type Project = {
   live: string;
   tag: string;
   lang: string;
+  /** Screenshot in /public/work/<slug>.png. Falls back to a branded panel if absent. */
+  preview: string;
   blurb: string;
   caseStudy: {
     problem: string;
@@ -22,6 +24,7 @@ export const projects: Project[] = [
     live: "https://mosaicfinance.ai",
     tag: "Fintech · Demo",
     lang: "TypeScript",
+    preview: "/work/mosaic-finance.png",
     blurb:
       "AI-powered financial planning — conversational fact-find, automated plan generation, full dashboard.",
     caseStudy: {
@@ -41,6 +44,7 @@ export const projects: Project[] = [
     live: "https://snowlaunch.io",
     tag: "Web3 · Live",
     lang: "Solidity",
+    preview: "/work/snowlaunch.png",
     blurb:
       "Token launchpad on Avalanche — bonding curves, on-chain trading, wallet integration.",
     caseStudy: {
@@ -50,7 +54,7 @@ export const projects: Project[] = [
         "A bonding-curve launchpad with security-reviewed contracts, an integrated trading interface, and one-click wallet flows.",
       stack: ["Solidity", "Foundry", "Next.js", "Avalanche/EVM"],
       outcome:
-        "A full launchpad shipped end-to-end — the engine behind the whitelabel Launchpad service.",
+        "A full launchpad shipped end-to-end — proof we can ship security-reviewed, production on-chain systems solo.",
     },
   },
   {
@@ -60,6 +64,7 @@ export const projects: Project[] = [
     live: "https://bestfoodapp.com",
     tag: "Consumer · Live",
     lang: "TypeScript",
+    preview: "/work/bestfoodapp.png",
     blurb:
       "Map-based discovery platform — geo search, structured listings, ratings, reviews, user lists.",
     caseStudy: {
@@ -79,6 +84,7 @@ export const projects: Project[] = [
     live: "https://platoslibrary.com",
     tag: "Content · Live",
     lang: "TypeScript",
+    preview: "/work/platos-library.png",
     blurb:
       "Content & curation platform with newsletter and multi-channel distribution.",
     caseStudy: {

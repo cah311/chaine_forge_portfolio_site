@@ -6,6 +6,7 @@ import type { RepoMeta } from "@/lib/github";
 import { site } from "@/lib/site";
 import { relTime } from "@/lib/rel-time";
 import { Reveal } from "@/components/reveal";
+import { ProjectPreview } from "@/components/project-preview";
 
 type ProjectCardProps = {
   project: Project;
@@ -25,6 +26,13 @@ export function ProjectCard({ project, meta }: ProjectCardProps) {
       <article
         className="group border border-hair rounded-[14px] p-7 bg-iron-raised relative overflow-hidden transition-all duration-350 hover:-translate-y-1 hover:border-hair-strong before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-brass before:scale-y-0 before:origin-top before:transition-transform before:duration-350 group-hover:before:scale-y-100"
       >
+        <Link
+          href={`/work/${project.slug}`}
+          aria-label={`View ${project.name} case study`}
+          className="block mb-5 [&_img]:transition-transform [&_img]:duration-500 group-hover:[&_img]:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 rounded-[12px]"
+        >
+          <ProjectPreview project={project} />
+        </Link>
         <span className="font-mono text-[11px] tracking-[0.12em] uppercase text-brass mb-3.5 inline-block">
           {project.tag}
         </span>

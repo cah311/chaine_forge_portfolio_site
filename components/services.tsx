@@ -5,7 +5,7 @@ const services = [
   {
     name: "Launch Pack",
     price: "$1,950",
-    priceNote: " CAD",
+    priceNote: " USD",
     time: "5 days",
     desc: "Validate before you build. A conversion-focused landing page, waitlist with email capture, analytics, and basic SEO — deployed on your domain.",
     guar: "Live in 5 business days from content handoff — or it's free.",
@@ -17,7 +17,7 @@ const services = [
   {
     name: "MVP Sprint",
     price: "$9,500",
-    priceNote: " CAD",
+    priceNote: " USD",
     time: "2–4 weeks",
     desc: "A real, working product: auth, payments, database, your core workflow done properly, admin basics. Includes deploy, domain, analytics, handover doc, and 30 days of Care.",
     guar: "The final 50% is only due when it ships working as the written spec says.",
@@ -29,7 +29,7 @@ const services = [
   {
     name: "Directory Platform",
     price: "$5,500",
-    priceNote: " CAD",
+    priceNote: " USD",
     time: "1–2 weeks",
     desc: "Your own Beli-style platform: interactive maps, geo search, structured listings, ratings and reviews, user lists, and an admin panel — under your brand, on our proven engine.",
     guar: "Built on a live, shipped codebase you can inspect today.",
@@ -39,13 +39,13 @@ const services = [
     fullWidth: false,
   },
   {
-    name: "Token Launchpad",
-    price: "$7,500",
-    priceNote: " CAD",
-    time: "1–2 weeks",
-    desc: "A bonding-curve launchpad on Avalanche or any EVM chain — your brand, your fee structure, security-reviewed contract architecture. Built on Snowlaunch. USDC invoicing available.",
+    name: "Web3 Build",
+    price: "From $12,000",
+    priceNote: " USD · scoped",
+    time: "Quoted per project",
+    desc: "On-chain products built properly: NFT mints, dApp frontends, analytics dashboards, custom contracts, wallet integration. Security-reviewed contract architecture on Avalanche or any EVM chain. Scoped and priced per project — third-party audits quoted and billed separately.",
     guar: "Disclosed teams only. We decline stealth-pump operations.",
-    bestfor: "↳ Best for: established crypto teams and communities.",
+    bestfor: "↳ Best for: established crypto teams building real, audited products.",
     feature: false,
     badge: null,
     fullWidth: false,
@@ -53,9 +53,9 @@ const services = [
   {
     name: "Sprint Subscription",
     price: "$3,950",
-    priceNote: " /mo · founding rate",
+    priceNote: " USD/mo · founding rate",
     time: "Ongoing · pause anytime",
-    desc: "Your product team on tap. Unlimited request queue, one active build at a time, most requests shipped in 2–4 business days. Pause anytime and unused days bank. Cancel anytime. The founding rate locks for life — it becomes $4,950/mo once the founding seats are gone.",
+    desc: "Your product team on tap. Unlimited request queue, one active build at a time, most requests shipped in 2–4 business days. Pause anytime and unused days bank. Cancel anytime. The founding rate locks for life — it becomes $4,950 USD/mo once the founding seats are gone.",
     guar: null,
     bestfor: "↳ Best for: post-launch founders who need continuous shipping without hiring.",
     feature: true,
@@ -154,7 +154,7 @@ export function Services() {
           ))}
         </div>
         <p className="font-mono text-xs text-smoke-dim text-center mt-6">
-          Care plans from $750/mo — hosting, monitoring, fixes, small tweaks.
+          Care plans from $750 USD/mo — hosting, monitoring, fixes, small tweaks.
           Attaches to any shipped build.
         </p>
       </div>

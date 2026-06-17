@@ -9,16 +9,16 @@ const skuOptions = [
   "Launch Pack",
   "MVP Sprint",
   "Directory Platform",
-  "Token Launchpad",
+  "Web3 Build",
   "Sprint Subscription",
 ];
 
 const budgetOptions = [
-  "Under $2k",
-  "$2–5k",
-  "$5–10k",
-  "$10–20k",
-  "$20k+",
+  "Under $2k USD",
+  "$2–5k USD",
+  "$5–10k USD",
+  "$10–20k USD",
+  "$20k+ USD",
 ];
 
 const timelineOptions = [
