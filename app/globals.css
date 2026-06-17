@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --iron: #15120f;
+  --iron-raised: #1e1a15;
+  --iron-deep: #100d0b;
+  --hair: rgba(242, 237, 228, 0.09);
+  --hair-strong: rgba(242, 237, 228, 0.16);
+  --bone: #f2ede4;
+  --smoke: #a39a8c;
+  --smoke-dim: #6f675c;
+  --brass: #c8a45c;
+  --brass-bright: #e3c078;
+  --ember: #e5683c;
+  --maxw: 1180px;
+  --r: 14px;
+}
+
+@theme inline {
+  --color-iron: #15120f;
+  --color-iron-raised: #1e1a15;
+  --color-iron-deep: #100d0b;
+  --color-bone: #f2ede4;
+  --color-smoke: #a39a8c;
+  --color-smoke-dim: #6f675c;
+  --color-brass: #c8a45c;
+  --color-brass-bright: #e3c078;
+  --color-ember: #e5683c;
+  --color-hair: rgba(242, 237, 228, 0.09);
+  --color-hair-strong: rgba(242, 237, 228, 0.16);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --max-width-wrap: 1180px;
+  --radius-card: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--iron);
+  color: var(--bone);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--iron-deep);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-pulse-ember {
+  animation: pulse 1.8s infinite;
+}
+
+.animate-blink {
+  animation: blink 1.1s steps(1) infinite;
+}
+
+.animate-marquee {
+  animation: slide 32s linear infinite;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
