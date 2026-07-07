@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="currentColor" fill-rule="evenodd" role="img" aria-label="Chain Forge Labs mark">
+  <!-- Squared chain link, 4.5u (14%) uniform stroke, 45° facet on the SW corner.
+       Counter is a flat-topped pentagon: the anvil. -->
+  <path d="M4 4h24v24H13L4 19Zm4.5 4.5v8.64l6.36 6.36h8.64V8.5Z"/>
+</svg>

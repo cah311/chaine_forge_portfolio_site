@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Chain Forge Labs badge">
+  <!-- Iron rounded square (corner ratio matches the 30px rounded-lg nav badge), brass mark. -->
+  <rect width="40" height="40" rx="10" fill="#15120F"/>
+  <path fill="#C8A45C" fill-rule="evenodd" d="M8 8h24v24H17l-9-9Zm4.5 4.5v8.64l6.36 6.36h8.64V12.5Z"/>
+</svg>

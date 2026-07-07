@@ -5,6 +5,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
 import { ProjectPreview } from "@/components/project-preview";
+import { caseStudyMetadata } from "@/lib/metadata";
 import { projects, getProjectBySlug } from "@/lib/projects";
 import { getRepoMeta } from "@/lib/github";
 import { site } from "@/lib/site";
@@ -24,10 +25,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Not Found" };
-  return {
-    title: `${project.name} — Chain Forge Labs`,
-    description: project.blurb,
-  };
+  return caseStudyMetadata(project.name, project.blurb, slug);
 }
 
 export default async function CaseStudyPage({ params }: PageProps) {
