@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { brand } from "@/lib/assets";
 import { site } from "@/lib/site";
 
 export const rootMetadata: Metadata = {
@@ -11,6 +12,9 @@ export const rootMetadata: Metadata = {
   applicationName: site.name,
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [{ url: brand.paths.badge, type: "image/svg+xml" }],
   },
   openGraph: {
     type: "website",

@@ -1,4 +1,5 @@
-import { site } from "@/lib/site";
+import { brand } from "@/lib/assets";
+import { absoluteUrl, site } from "@/lib/site";
 
 export function JsonLdOrganization() {
   const schema = {
@@ -8,7 +9,7 @@ export function JsonLdOrganization() {
     url: site.url,
     email: site.contactEmail,
     description: site.description,
-    logo: `${site.url}/brand/cfl-badge.svg`,
+    logo: absoluteUrl(brand.paths.badge),
   };
 
   return (

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { brand } from "@/lib/assets";
 import { site } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
@@ -16,8 +17,8 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          background: "#15120F",
-          color: "#F2EDE4",
+          background: brand.colors.iron,
+          color: brand.colors.bone,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
@@ -26,7 +27,7 @@ export default function OpenGraphImage() {
               width: 72,
               height: 72,
               borderRadius: 18,
-              background: "#15120F",
+              background: brand.colors.iron,
               border: "2px solid rgba(242,237,228,0.12)",
               display: "flex",
               alignItems: "center",
@@ -36,14 +37,11 @@ export default function OpenGraphImage() {
             <svg
               width="42"
               height="42"
-              viewBox="0 0 32 32"
-              fill="#C8A45C"
+              viewBox={brand.mark.viewBox}
+              fill={brand.colors.brass}
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                fillRule="evenodd"
-                d="M4 4h24v24H13L4 19Zm4.5 4.5v8.64l6.36 6.36h8.64V8.5Z"
-              />
+              <path fillRule="evenodd" d={brand.mark.d} />
             </svg>
           </div>
           <div
@@ -82,7 +80,7 @@ export default function OpenGraphImage() {
           </div>
         </div>
 
-        <div style={{ fontSize: 24, color: "#C8A45C" }}>
+        <div style={{ fontSize: 24, color: brand.colors.brass }}>
           chainforgelabs.io
         </div>
       </div>
