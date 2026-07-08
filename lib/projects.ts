@@ -72,6 +72,11 @@ export const projects: Project[] = [
     tag: "Consumer · Live",
     lang: "TypeScript",
     preview: "/work/bestfoodapp.png",
+    gallery: [
+      { src: "/work/bestfoodapp.png", label: "Home & city search" },
+      { src: "/work/bestfoodapp-2.png", label: "Leaderboards" },
+      { src: "/work/bestfoodapp-3.png", label: "Profile & review gallery" },
+    ],
     blurb:
       "Map-based discovery platform — geo search, structured listings, ratings, reviews, user lists.",
     caseStudy: {
