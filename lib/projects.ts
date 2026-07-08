@@ -97,6 +97,11 @@ export const projects: Project[] = [
     tag: "Content · Live",
     lang: "TypeScript",
     preview: "/work/platos-library.png",
+    gallery: [
+      { src: "/work/platos-library.png", label: "Home page" },
+      { src: "/work/platos-library-2.png", label: "Book review" },
+      { src: "/work/platos-library-3.png", label: "Category browsing" },
+    ],
     blurb:
       "Content & curation platform with newsletter and multi-channel distribution.",
     caseStudy: {
