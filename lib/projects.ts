@@ -7,6 +7,8 @@ export type Project = {
   lang: string;
   /** Screenshot in /public/work/<slug>.png. Falls back to a branded panel if absent. */
   preview: string;
+  /** Extra screenshots for the case-study gallery. First entry should match `preview`. */
+  gallery?: { src: string; label: string }[];
   blurb: string;
   caseStudy: {
     problem: string;
@@ -25,6 +27,11 @@ export const projects: Project[] = [
     tag: "Fintech · Demo",
     lang: "TypeScript",
     preview: "/work/mosaic-finance.png",
+    gallery: [
+      { src: "/work/mosaic-finance.png", label: "Landing page" },
+      { src: "/work/mosaic-finance-2.png", label: "Client dashboard" },
+      { src: "/work/mosaic-finance-3.png", label: "Plan review" },
+    ],
     blurb:
       "AI-powered financial planning — conversational fact-find, automated plan generation, full dashboard.",
     caseStudy: {

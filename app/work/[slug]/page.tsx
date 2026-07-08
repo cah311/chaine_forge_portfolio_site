@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
-import { ProjectPreview } from "@/components/project-preview";
+import { ProjectGallery } from "@/components/project-gallery";
 import { caseStudyMetadata } from "@/lib/metadata";
 import { projects, getProjectBySlug } from "@/lib/projects";
 import { getRepoMeta } from "@/lib/github";
@@ -114,11 +114,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           <Reveal>
             <div className="max-w-[920px] mb-14">
-              <ProjectPreview
-                project={project}
-                eager
-                sizes="(max-width: 920px) 100vw, 920px"
-              />
+              <ProjectGallery project={project} />
             </div>
           </Reveal>
 
