@@ -124,12 +124,12 @@ export function Services() {
                     {svc.badge}
                   </span>
                 )}
-                <div className="flex justify-between items-baseline gap-3.5 mb-1.5">
+                <div className="flex flex-wrap justify-between items-baseline gap-x-3.5 gap-y-1 mb-1.5">
                   <h3 className="font-display font-bold text-[1.4rem]">
                     {svc.name}
                   </h3>
-                  <span className="font-display font-bold text-2xl whitespace-nowrap">
-                    {svc.price}
+                  <span className="font-display font-bold text-2xl">
+                    <span className="whitespace-nowrap">{svc.price}</span>
                     <small className="text-[0.8rem] text-smoke font-medium">
                       {svc.priceNote}
                     </small>

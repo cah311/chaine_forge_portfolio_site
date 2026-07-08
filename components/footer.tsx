@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="flex justify-between items-center gap-6 flex-wrap">
           <BrandLink />
-          <div className="flex gap-6 font-mono text-[13px] text-smoke">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 font-mono text-[13px] text-smoke">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

@@ -38,6 +38,10 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* `clip` forbids horizontal panning entirely (iOS Safari ignores plain
+     `hidden` on body); `hidden` is the fallback for older browsers. */
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -48,6 +52,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
