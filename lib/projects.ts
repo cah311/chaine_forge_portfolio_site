@@ -52,6 +52,13 @@ export const projects: Project[] = [
     tag: "Web3 · Live",
     lang: "Solidity",
     preview: "/work/snowlaunch.png",
+    gallery: [
+      { src: "/work/snowlaunch.png", label: "Home & token marketplace" },
+      { src: "/work/snowlaunch-2.png", label: "Onboarding" },
+      { src: "/work/snowlaunch-3.png", label: "Advanced metrics" },
+      { src: "/work/snowlaunch-4.png", label: "Token launch form" },
+      { src: "/work/snowlaunch-5.png", label: "Trading & price chart" },
+    ],
     blurb:
       "Token launchpad on Avalanche — bonding curves, on-chain trading, wallet integration.",
     caseStudy: {
