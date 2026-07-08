@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chain Forge Labs
+
+Portfolio site for Chain Forge Labs — an AI-native product studio.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Logo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The mark is a **blacksmith's touchmark** — the kind of stamp a forge punches into hot metal to claim ownership. That framing drove every decision: one symbol, heavy geometry, no decoration, built to read at favicon size.
 
-## Learn More
+**Chain link, not an anvil.** The name is *Chain Forge*, so the primary read is a single squared chain link: a hollow square with a uniform stroke. We avoided drawing an anvil outright; the forge reference lives in the *making* of the mark, not a literal illustration.
 
-To learn more about Next.js, take a look at the following resources:
+**The 45° facet.** The bottom-left corner is sheared at exactly 45° on both the outer and inner edges. That cut does two jobs: it breaks the perfect symmetry so the link feels hand-struck rather than generic, and the negative space it creates resolves into a flat-topped pentagon — a subtle anvil silhouette for anyone who looks twice.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Stroke weight.** The link wall is ~14% of the viewBox width (4.5 units in a 32×32 grid). At 16px that lands around 2.25px — thick enough to survive favicons and nav chips without the facet disappearing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Technical choices.** The geometry is a single path with `fill-rule="evenodd"` and `currentColor` fill so it themes with CSS. No gradients, no strokes-on-strokes — just fill shapes that scale cleanly. The wordmark lockup uses Bricolage Grotesque 800 outlined to paths so it renders identically everywhere without a font dependency.
 
-## Deploy on Vercel
+**Variants** (in `public/brand/`, paths in `lib/assets.ts`):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| File | Use |
+|---|---|
+| `cfl-mark.svg` | Standalone mark, theming via `currentColor` |
+| `cfl-badge.svg` | Brass mark on iron rounded square — nav, footer, JSON-LD |
+| `cfl-lockup.svg` | Horizontal mark + wordmark for dark surfaces |
+| `cfl-stamp.svg` | One-color knockout for embossing, foil, watermarks |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Built for static export / Vercel. See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
+
