@@ -3,28 +3,28 @@ import { Reveal } from "@/components/reveal";
 const cells = [
   {
     n: "01",
+    title: "Capital-markets discipline",
+    desc: "We come from a world where an unwritten scope is a liability and \"trust me\" isn't a control. The habits came with us: written specs, disclosed pricing, audit-trail delivery — and the boring parts (data integrity, edge cases, security) done right.",
+  },
+  {
+    n: "02",
     title: "AI-native pipeline",
     desc: "Senior-level architecture plus frontier-model leverage. What took agencies a quarter takes us weeks — and the savings are priced in.",
   },
   {
-    n: "02",
-    title: "Finance-grade rigor",
-    desc: "Built by operators with an institutional capital-markets background. The boring parts — data integrity, edge cases, security — get done right.",
-  },
-  {
     n: "03",
     title: "Fixed price, fixed scope",
-    desc: "No hourly meter. Scope changes are written, priced, and approved before work continues. No surprise invoices.",
+    desc: "No hourly meter. Quotes are underwritten in writing before a dollar moves. Scope changes are written, priced, and approved before work continues. No surprise invoices.",
   },
   {
     n: "04",
     title: "You own everything",
-    desc: "Code, repo, IP, infrastructure, accounts. Zero lock-in — fire us anytime and walk away whole.",
+    desc: "Your code, your repo, your custody — from the first commit. Zero lock-in: fire us anytime and walk away whole.",
   },
   {
     n: "05",
     title: "Async-first",
-    desc: "Written specs, recorded demos, daily updates. Your calendar stays empty and nothing gets lost in a call.",
+    desc: "Everything on the record: written specs, recorded demos, daily updates. Your calendar stays empty and nothing gets lost in a call.",
   },
   {
     n: "06",
@@ -48,7 +48,7 @@ export function Why() {
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
               >
-                Senior output, without the agency.
+                Most studios are salespeople who learned to prompt. We&apos;re capital-markets operators who learned to ship.
               </h2>
             </Reveal>
           </div>

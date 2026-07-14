@@ -49,14 +49,14 @@ export function RiskBand() {
             </Reveal>
             <Reveal>
               <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                A faceless studio earns trust structurally — not with a founder
-                story. So we put the risk on our side of the table and write it
-                into every quote.
+                A faceless studio earns trust the way institutions do —
+                structurally. Every quote is underwritten: the risks are priced,
+                disclosed in writing, and sitting on our side of the table.
               </p>
             </Reveal>
             <Reveal>
               <p className="font-mono text-xs text-smoke-dim mt-[22px] italic">
-                Conditions are written into every quote — the clock pauses when
+                Conditions are disclosed in every quote — the clock pauses when
                 we&apos;re waiting on you. Fair both ways.
               </p>
             </Reveal>

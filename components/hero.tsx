@@ -36,7 +36,7 @@ export function Hero({ projects, meta }: HeroProps) {
                 ))}
               </h1>
               <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — at AI-native speed, for a fixed price, with zero mandatory meetings.
+                We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — capital-markets discipline: fixed prices underwritten in writing, risk on our side, zero mandatory meetings.
               </p>
               <HeroCTAs />
               <TrustBar />
@@ -95,7 +95,7 @@ export function Hero({ projects, meta }: HeroProps) {
                 visible: { opacity: 1, transition: { duration: 0.7, ease } },
               }}
             >
-              We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — at AI-native speed, for a fixed price, with zero mandatory meetings.
+              We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — capital-markets discipline: fixed prices underwritten in writing, risk on our side, zero mandatory meetings.
             </motion.p>
             <motion.div
               variants={{
@@ -161,7 +161,7 @@ function HeroCTAs() {
 function TrustBar() {
   const items = [
     "4 products shipped",
-    "Finance-grade rigor",
+    "Capital-markets rigor",
     "Your repo, day one",
   ];
   return (

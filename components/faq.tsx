@@ -9,6 +9,10 @@ const items = [
     a: "Async keeps us fast and keeps your price down. Everything lives in writing, so nothing gets lost. If a voice call is genuinely needed, we do one after the deposit — scoping happens in writing.",
   },
   {
+    q: "Why do you sound like a finance firm?",
+    a: "The team's background is institutional capital markets, where scope is written, fees are disclosed, and risk is controlled before work begins. We run software delivery the same way — which is why the guarantees exist in writing instead of on a sales call.",
+  },
+  {
     q: "Who owns the code and IP?",
     a: "You do, from the first commit. We build in a repo under your account, so you're never locked in and never waiting on a handover.",
   },
@@ -30,7 +34,7 @@ const items = [
   },
   {
     q: "Who are you?",
-    a: "A senior studio that ships under a brand, not a face. Judge the work — every demo above is live and the code is public. We'll sign an NDA under our legal entity.",
+    a: "Operators with an institutional capital-markets background who learned to ship. We work under a brand, not a face — written specs, disclosed pricing, audit-trail delivery. Judge the work — every demo is live.",
   },
 ];
 

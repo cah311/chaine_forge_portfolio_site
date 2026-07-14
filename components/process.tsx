@@ -8,7 +8,7 @@ const steps = [
   {
     num: "01",
     title: "Scope",
-    desc: "Fill out the form. You get a fixed written quote and a one-page spec in 48 hours — or an honest \"not a fit.\" No discovery calls, no sales theater.",
+    desc: "Fill out the form. You get a written, underwritten quote and a one-page spec in 48 hours — or an honest \"not a fit.\" No discovery calls, no sales theater.",
   },
   {
     num: "02",
@@ -18,7 +18,7 @@ const steps = [
   {
     num: "03",
     title: "Ship",
-    desc: "Deployed on your infrastructure with a handover doc and a 14-day fix window. Fire us anytime and lose nothing.",
+    desc: "Deployed on your infrastructure with a handover doc — your audit trail — and a 14-day fix window. Fire us anytime and lose nothing.",
   },
 ];
 

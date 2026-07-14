@@ -154,8 +154,8 @@ export function Services() {
           ))}
         </div>
         <p className="font-mono text-xs text-smoke-dim text-center mt-6">
-          Care plans from $750 USD/mo — hosting, monitoring, fixes, small tweaks.
-          Attaches to any shipped build.
+          Care plans — ongoing stewardship — from $750 USD/mo: hosting,
+          monitoring, fixes, small tweaks. Attaches to any shipped build.
         </p>
       </div>
     </section>

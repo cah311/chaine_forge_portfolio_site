@@ -4,7 +4,7 @@ export const site = {
   name: "Chain Forge Labs",
   tagline: "Working software in weeks",
   description:
-    "An AI-native product studio. We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — fixed price, fixed scope, you own everything.",
+    "An AI-native product studio with capital-markets discipline. Full-stack apps, fintech tools, and on-chain platforms — fixed price, underwritten in writing.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? defaultUrl,
   contactEmail: process.env.CONTACT_EMAIL ?? "hello@chainforgelabs.io",
   availability:
