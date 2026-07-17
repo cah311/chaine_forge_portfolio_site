@@ -58,25 +58,25 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div
             style={{
-              fontSize: 72,
+              fontSize: 64,
               fontWeight: 800,
-              lineHeight: 1.02,
+              lineHeight: 1.05,
               letterSpacing: "-0.03em",
-              maxWidth: 900,
+              maxWidth: 960,
             }}
           >
-            {site.tagline}
+            Find 5+ hours a week. Guaranteed — or it&apos;s free.
           </div>
           <div
             style={{
-              fontSize: 28,
+              fontSize: 26,
               color: "#A39A8C",
               maxWidth: 820,
               lineHeight: 1.35,
             }}
           >
-            Fixed-price builds for web apps, fintech tools, and on-chain
-            platforms.
+            Fixed-fee AI Tools Assessment · credited toward build · we ship what
+            off-the-shelf can&apos;t.
           </div>
         </div>
 

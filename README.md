@@ -1,6 +1,6 @@
 # Chain Forge Labs
 
-Portfolio site for Chain Forge Labs — an AI-native product studio.
+Site for Chain Forge Labs: a fixed-fee **AI Tools Assessment** as the front door, then builds and an AI Concierge retainer for what off-the-shelf tools can't solve. Portfolio products stay public as proof we ship.
 
 ## Getting Started
 

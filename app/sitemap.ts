@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: absoluteUrl("/launchpad"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     ...projects.map((project) => ({
       url: absoluteUrl(`/work/${project.slug}`),
       lastModified: now,

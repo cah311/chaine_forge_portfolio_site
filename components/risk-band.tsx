@@ -2,28 +2,28 @@ import { Reveal } from "@/components/reveal";
 
 const rows = [
   {
-    k: "QUOTE",
-    v: "A fixed written quote in <b>48 hours</b> — or an honest \"not a fit.\"",
+    k: "GUARANTEE",
+    v: "We identify at least <b>5 reclaimable hours per week</b> — or your $1,500 is refunded in full.",
   },
   {
-    k: "START",
-    v: "First commit within <b>2 business days</b> of your deposit.",
+    k: "CREDITED",
+    v: "The full fee is <b>credited toward any build</b> booked within 90 days.",
   },
   {
-    k: "LAUNCH PACK",
-    v: "Live in 5 business days from content handoff, <b>or it's free</b>.",
+    k: "HONEST MATRIX",
+    v: "Quick wins you can run yourself <b>and</b> a major-projects quadrant for what needs to be built.",
   },
   {
-    k: "EVERY BUILD",
-    v: "The final 50% is due <b>only when it works</b> as the spec says.",
+    k: "CAPACITY",
+    v: "A limited number of assessments each month — every report is <b>hand-built</b>, not templated spam.",
   },
   {
     k: "OWNERSHIP",
-    v: "Your code, repo, and IP — <b>from the first commit</b>.",
+    v: "When we build, your code, repo, and IP — <b>from the first commit</b>.",
   },
   {
-    k: "AFTER SHIP",
-    v: "A <b>14-day</b> fix window, no quibbling.",
+    k: "BUILDS",
+    v: "Final 50% on implementations due <b>only when it works</b> as the written spec says.",
   },
 ];
 
@@ -31,6 +31,7 @@ export function RiskBand() {
   return (
     <section
       className="py-[120px] max-[900px]:py-[84px] bg-iron-deep border-t border-b border-hair relative before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-ember before:to-transparent before:opacity-50"
+      id="guarantee"
     >
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="grid grid-cols-1 min-[901px]:grid-cols-[0.85fr_1.15fr] gap-10 min-[901px]:gap-[50px] items-center">
@@ -44,20 +45,21 @@ export function RiskBand() {
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px] mb-[18px]"
               >
-                The risk sits with us.
+                5 hours a week, or your money back.
               </h2>
             </Reveal>
             <Reveal>
               <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                A faceless studio earns trust the way institutions do —
-                structurally. Every quote is underwritten: the risks are priced,
-                disclosed in writing, and sitting on our side of the table.
+                Most small businesses are dabbling in ChatGPT without
+                integrating anything into core operations. We find the reclaimable
+                hours — then show you which tools to buy and which systems to
+                build.
               </p>
             </Reveal>
             <Reveal>
               <p className="font-mono text-xs text-smoke-dim mt-[22px] italic">
-                Conditions are disclosed in every quote — the clock pauses when
-                we&apos;re waiting on you. Fair both ways.
+                &quot;Reclaimable hours&quot; means identified opportunities, not
+                already-implemented ones. Terms disclosed before you pay.
               </p>
             </Reveal>
           </div>

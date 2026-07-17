@@ -3,28 +3,28 @@
 import { useActionState } from "react";
 import { submitQuote } from "@/app/actions/quote";
 import { Reveal } from "@/components/reveal";
+import { site } from "@/lib/site";
 
-const skuOptions = [
+const interestOptions = [
+  "AI Tools Assessment",
+  "Assessment → likely build",
+  "AI Concierge",
+  "MVP / custom build",
   "Not sure yet",
-  "Launch Pack",
-  "MVP Sprint",
-  "Directory Platform",
-  "Web3 Build",
-  "Sprint Subscription",
 ];
 
-const budgetOptions = [
-  "Under $2k USD",
-  "$2–5k USD",
-  "$5–10k USD",
-  "$10–20k USD",
-  "$20k+ USD",
+const sizeOptions = [
+  "Just me / solo",
+  "2–5 people",
+  "6–20 people",
+  "21–50 people",
+  "50+",
 ];
 
 const timelineOptions = [
-  "ASAP",
-  "2–4 weeks",
-  "1–3 months",
+  "This month",
+  "Next 1–2 months",
+  "This quarter",
   "Just exploring",
 ];
 
@@ -37,29 +37,45 @@ export function QuoteForm() {
   return (
     <section
       className="py-[120px] max-[900px]:py-[84px] bg-iron-deep border-t border-hair"
-      id="contact"
+      id="assessment"
     >
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="grid grid-cols-1 min-[901px]:grid-cols-[0.9fr_1.1fr] gap-10 min-[901px]:gap-[54px] items-start">
           <div>
             <Reveal>
               <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-                Start
+                Book
               </span>
             </Reveal>
             <Reveal>
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px] mb-[18px]"
               >
-                Tell us what you&apos;re building.
+                Book your AI Tools Assessment.
               </h2>
             </Reveal>
             <Reveal>
               <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                We reply within 48 hours with a fixed quote or an honest
-                &quot;not a fit.&quot; Either way, you&apos;ll know more than
-                you do now.
+                {site.assessmentPrice} {site.currency}. Five reclaimable hours a
+                week identified, or a full refund. Fully credited toward any
+                build within 90 days. We reply within two business days.
               </p>
+            </Reveal>
+            <Reveal>
+              <ul className="mt-8 space-y-3 font-mono text-[12.5px] text-smoke">
+                {[
+                  "45-min discovery + written report + review call",
+                  "Quick wins you can run yourself",
+                  "Major-projects map if you need to build",
+                ].map((line) => (
+                  <li
+                    key={line}
+                    className="flex items-start gap-2.5 before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:bg-brass before:mt-1.5 before:flex-none"
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
 
@@ -70,12 +86,12 @@ export function QuoteForm() {
                   htmlFor="f-build"
                   className="block font-mono text-xs text-smoke mb-2 tracking-[0.04em]"
                 >
-                  What are you building?
+                  Where does time disappear in your business?
                 </label>
                 <textarea
                   id="f-build"
                   name="build"
-                  placeholder="A few sentences on the product and the core problem it solves…"
+                  placeholder="The messy workflows, handoffs, or repetitive work that eat your week…"
                   className="w-full bg-iron-raised border border-hair-strong rounded-[10px] text-bone text-[15px] px-[15px] py-[13px] transition-colors focus:outline-none focus:border-brass resize-y min-h-[84px]"
                   required
                 />
@@ -87,16 +103,18 @@ export function QuoteForm() {
                     htmlFor="f-sku"
                     className="block font-mono text-xs text-smoke mb-2 tracking-[0.04em]"
                   >
-                    Which offer fits best?
+                    What are you looking for?
                   </label>
                   <select
                     id="f-sku"
                     name="sku"
                     className="w-full bg-iron-raised border border-hair-strong rounded-[10px] text-bone text-[15px] px-[15px] py-[13px] transition-colors focus:outline-none focus:border-brass"
-                    defaultValue="Not sure yet"
+                    defaultValue="AI Tools Assessment"
                   >
-                    {skuOptions.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
+                    {interestOptions.map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -105,16 +123,18 @@ export function QuoteForm() {
                     htmlFor="f-budget"
                     className="block font-mono text-xs text-smoke mb-2 tracking-[0.04em]"
                   >
-                    Budget range
+                    Team size
                   </label>
                   <select
                     id="f-budget"
                     name="budget"
                     className="w-full bg-iron-raised border border-hair-strong rounded-[10px] text-bone text-[15px] px-[15px] py-[13px] transition-colors focus:outline-none focus:border-brass"
-                    defaultValue="Under $2k"
+                    defaultValue="2–5 people"
                   >
-                    {budgetOptions.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
+                    {sizeOptions.map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -132,10 +152,12 @@ export function QuoteForm() {
                     id="f-time"
                     name="timeline"
                     className="w-full bg-iron-raised border border-hair-strong rounded-[10px] text-bone text-[15px] px-[15px] py-[13px] transition-colors focus:outline-none focus:border-brass"
-                    defaultValue="ASAP"
+                    defaultValue="This month"
                   >
                     {timelineOptions.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -162,13 +184,13 @@ export function QuoteForm() {
                   htmlFor="f-links"
                   className="block font-mono text-xs text-smoke mb-2 tracking-[0.04em]"
                 >
-                  Links — anything relevant (optional)
+                  Website or LinkedIn (optional)
                 </label>
                 <input
                   id="f-links"
                   name="links"
                   type="text"
-                  placeholder="Figma, repo, existing site…"
+                  placeholder="company.com or linkedin.com/…"
                   className="w-full bg-iron-raised border border-hair-strong rounded-[10px] text-bone text-[15px] px-[15px] py-[13px] transition-colors focus:outline-none focus:border-brass"
                 />
               </div>
@@ -178,7 +200,7 @@ export function QuoteForm() {
                 disabled={pending}
                 className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group"
               >
-                {pending ? "Sending…" : "Send it — get a quote in 48h"}
+                {pending ? "Sending…" : "Request your assessment"}
                 {!pending && (
                   <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
                     ↗
@@ -195,7 +217,8 @@ export function QuoteForm() {
               )}
 
               <p className="font-mono text-xs text-smoke-dim mt-1">
-                No spam, no drip sequence. One human reply.
+                No spam, no drip. One human reply — usually within two business
+                days.
               </p>
             </form>
           </Reveal>

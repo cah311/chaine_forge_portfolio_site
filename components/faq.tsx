@@ -5,36 +5,36 @@ import { Reveal } from "@/components/reveal";
 
 const items = [
   {
-    q: "Why no calls?",
-    a: "Async keeps us fast and keeps your price down. Everything lives in writing, so nothing gets lost. If a voice call is genuinely needed, we do one after the deposit — scoping happens in writing.",
+    q: "What exactly do I get for $1,500?",
+    a: "A 45-minute recorded discovery call, AI analysis of the transcript, a written report (executive summary, effort-vs-impact matrix, tool recommendations with cost/setup/time saved, a 4-day quick-start plan, ROI slide, and a major-projects quadrant), plus a 30-minute review call. Fully credited toward any implementation booked within 90 days.",
   },
   {
-    q: "Why do you sound like a finance firm?",
-    a: "The team's background is institutional capital markets, where scope is written, fees are disclosed, and risk is controlled before work begins. We run software delivery the same way — which is why the guarantees exist in writing instead of on a sales call.",
+    q: "What's the 5-hours guarantee, precisely?",
+    a: "We identify at least five reclaimable hours per week in your current operations — opportunities that are real and actionable, not already implemented. If we can't, your $1,500 is refunded in full. Terms are disclosed before you pay.",
   },
   {
-    q: "Who owns the code and IP?",
-    a: "You do, from the first commit. We build in a repo under your account, so you're never locked in and never waiting on a handover.",
+    q: "Who is this for?",
+    a: "Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a $1,500 assessment. Vertical doesn't matter for the assessment itself. We decline financial advisors, wealth managers, and physician-wealth-adjacent firms for conflict reasons.",
   },
   {
-    q: "What's the stack?",
-    a: "TypeScript, Next.js/React, Postgres, and Stripe on the web side. Solidity and Foundry on-chain. We'll deviate if your project genuinely needs it.",
+    q: "Do you only recommend tools you sell?",
+    a: "No. We recommend free and cheap off-the-shelf tools generously in the quick-wins quadrant. Build recommendations only appear when nothing on the shelf solves the problem — and because we can actually ship software, those recommendations are honest, not a bait-and-switch.",
   },
   {
-    q: "How does the Sprint Subscription work?",
-    a: "You load a request queue; we work one request at a time, top to bottom. A request is anything buildable in about two days — bigger asks get split into sequential requests or quoted as a fixed-price project. Most requests ship in 2–4 business days. Pause whenever; unused days bank toward your next cycle.",
+    q: "What happens after the assessment?",
+    a: "Three paths: run the quick wins yourself, book a fixed-price build from the major-projects quadrant (assessment fee credited), or move into the AI Concierge retainer for ongoing done-with-you skill building. No obligation on any of them.",
   },
   {
-    q: "Is the seat scarcity real?",
-    a: "Yes. Two subscription seats and two concurrent builds — ever. We publish actual availability and never invent urgency. The entire brand rests on you being able to verify what we say.",
+    q: "How does AI Concierge work?",
+    a: "Two 45-minute Zoom working sessions per month building Claude skills with you, plus async access with a 12-business-hour SLA. Capped at 5–6 clients — real capacity, published openly. $1,800–$2,800 CAD/mo depending on scope.",
   },
   {
-    q: "What if my scope changes mid-build?",
-    a: "Written change order, fixed price, your approval before we continue. The original scope stays the original price.",
+    q: "Who owns code if we build?",
+    a: "You do, from the first commit. We build in a repo under your account. Final 50% on builds is due only when the product works as the written spec says.",
   },
   {
     q: "Who are you?",
-    a: "Operators with an institutional capital-markets background who learned to ship. We work under a brand, not a face — written specs, disclosed pricing, audit-trail delivery. Judge the work — every demo is live.",
+    a: "A studio that ships under a brand, not a face. Capital-markets discipline on scope and risk; AI-native delivery on speed. Judge the work — every product in the portfolio is live.",
   },
 ];
 

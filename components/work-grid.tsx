@@ -16,23 +16,24 @@ export function WorkGrid({ projects, meta }: WorkGridProps) {
           <div>
             <Reveal>
               <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-                Selected Work
+                Proof we ship
               </span>
             </Reveal>
             <Reveal>
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
               >
-                The work is public.
+                We don&apos;t just recommend tools.
                 <br />
-                Inspect it.
+                We ship software.
               </h2>
             </Reveal>
           </div>
           <Reveal>
             <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch] mt-[18px]">
-              Four shipped products across four categories. Open the live builds.
-              Read the code. We sell on proof, not promises.
+              Four products we built ourselves — live demos, public code. This is
+              why the assessment&apos;s &quot;major projects&quot; quadrant is
+              honest: we can actually build what we recommend.
             </p>
           </Reveal>
         </div>

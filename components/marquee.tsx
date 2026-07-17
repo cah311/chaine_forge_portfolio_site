@@ -1,6 +1,6 @@
 export function Marquee() {
   const items =
-    "TypeScript · Next.js · React · Solidity · Foundry · Postgres · Supabase · Stripe · Tailwind · Avalanche · EVM · AI-Native";
+    "Claude · Agent Skills · TypeScript · Next.js · React · Postgres · Supabase · Stripe · Tailwind · AI Concierge · Fixed-fee builds";
 
   return (
     <div

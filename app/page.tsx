@@ -1,10 +1,11 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
+import { Process } from "@/components/process";
+import { RiskBand } from "@/components/risk-band";
+import { Services } from "@/components/services";
+import { Concierge } from "@/components/concierge";
 import { WorkGrid } from "@/components/work-grid";
 import { Marquee } from "@/components/marquee";
-import { Services } from "@/components/services";
-import { RiskBand } from "@/components/risk-band";
-import { Process } from "@/components/process";
 import { Why } from "@/components/why";
 import { Faq } from "@/components/faq";
 import { QuoteForm } from "@/components/quote-form";
@@ -20,11 +21,12 @@ export default async function Home() {
       <Nav />
       <main>
         <Hero projects={projects} meta={meta} />
+        <Process />
+        <RiskBand />
+        <Services />
+        <Concierge />
         <WorkGrid projects={projects} meta={meta} />
         <Marquee />
-        <Services />
-        <RiskBand />
-        <Process />
         <Why />
         <Faq />
         <QuoteForm />

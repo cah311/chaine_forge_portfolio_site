@@ -45,11 +45,11 @@ export function Nav() {
           </Link>
         ))}
         <Link
-          href="#contact"
+          href="/#assessment"
           className="inline-flex items-center gap-[9px] font-semibold text-sm px-[18px] py-[10px] rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
           onClick={() => setMenuOpen(false)}
         >
-          Get a quote
+          Book assessment
         </Link>
       </div>
 

@@ -3,39 +3,39 @@ import { Reveal } from "@/components/reveal";
 const cells = [
   {
     n: "01",
-    title: "Capital-markets discipline",
-    desc: "We come from a world where an unwritten scope is a liability and \"trust me\" isn't a control. The habits came with us: written specs, disclosed pricing, audit-trail delivery — and the boring parts (data integrity, edge cases, security) done right.",
+    title: "We prescribe and we build",
+    desc: "Most AI consultants stop at a slide deck. We can recommend free tools generously — and honestly recommend building when nothing off-the-shelf solves it. Same team does both.",
   },
   {
     n: "02",
-    title: "AI-native pipeline",
-    desc: "Senior-level architecture plus frontier-model leverage. What took agencies a quarter takes us weeks — and the savings are priced in.",
+    title: "Paid assessment, not a free audit",
+    desc: "Paid diagnostics self-qualify and convert. $1,500 CAD filters tire-kickers, sits below the $2,500–$4,500 \"readiness\" band, and disappears entirely if you proceed to a build.",
   },
   {
     n: "03",
-    title: "Fixed price, fixed scope",
-    desc: "No hourly meter. Quotes are underwritten in writing before a dollar moves. Scope changes are written, priced, and approved before work continues. No surprise invoices.",
+    title: "Guarantee with teeth",
+    desc: "Five reclaimable hours per week, or a full refund. Capacity is limited so every report is hand-built. No fake urgency — just real constraints.",
   },
   {
     n: "04",
-    title: "You own everything",
-    desc: "Your code, your repo, your custody — from the first commit. Zero lock-in: fire us anytime and walk away whole.",
+    title: "Vertical-agnostic by design",
+    desc: "If you have 2–20 people, real workflows, and a budget for $1,500, we can assess you. We decline only where we have a hard conflict — not because your industry isn't trendy.",
   },
   {
     n: "05",
-    title: "Async-first",
-    desc: "Everything on the record: written specs, recorded demos, daily updates. Your calendar stays empty and nothing gets lost in a call.",
+    title: "Proof you can click",
+    desc: "Four products we built ourselves are live. Judge the work before you pay for advice about work.",
   },
   {
     n: "06",
-    title: "Proof over pitch",
-    desc: "Four live products, public code. We'd rather you click a demo than read a testimonial wall.",
+    title: "Written, underwritten delivery",
+    desc: "Capital-markets habits: written specs, disclosed pricing, audit-trail delivery. When we build, final payment is due only when it works as the spec says.",
   },
 ];
 
 export function Why() {
   return (
-    <section className="py-[84px]">
+    <section className="py-[84px]" id="about">
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="flex justify-between items-end gap-6 mb-10 flex-wrap">
           <div>
@@ -48,7 +48,8 @@ export function Why() {
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
               >
-                Most studios are salespeople who learned to prompt. We&apos;re capital-markets operators who learned to ship.
+                We find where AI saves your business time — then build what
+                off-the-shelf tools can&apos;t.
               </h2>
             </Reveal>
           </div>

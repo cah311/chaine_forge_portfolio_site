@@ -2,24 +2,27 @@ const defaultUrl = "https://chainforgelabs.io";
 
 export const site = {
   name: "Chain Forge Labs",
-  tagline: "Working software in weeks",
+  tagline: "Find where AI saves your business time — then build the rest",
   description:
-    "An AI-native product studio with capital-markets discipline. Full-stack apps, fintech tools, and on-chain platforms — fixed price, underwritten in writing.",
+    "A fixed-fee AI Tools Assessment maps your biggest time-drains to the right tools — with a 5-hours-a-week guarantee. Then we build what off-the-shelf can't. Credited in full if you build with us.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? defaultUrl,
   contactEmail: process.env.CONTACT_EMAIL ?? "hello@chainforgelabs.io",
   availability:
     process.env.AVAILABILITY ??
-    "2 build slots · 1 of 2 founding seats open",
+    "Limited assessments each month · hand-built reports",
   githubOrg: process.env.GITHUB_ORG ?? "",
   resendFrom:
     process.env.RESEND_FROM ?? "Chain Forge <quotes@chainforgelabs.io>",
+  assessmentPrice: "$1,500",
+  currency: "CAD",
 } as const;
 
 export const navLinks = [
-  { href: "#work", label: "Work" },
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#assessment", label: "Assessment" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/#build", label: "Build" },
+  { href: "/#concierge", label: "AI Concierge" },
+  { href: "/#work", label: "Work" },
 ];
 
 /** Build an absolute URL from a site-relative path. */

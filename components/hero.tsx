@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import type { Project } from "@/lib/projects";
 import type { RepoMeta } from "@/lib/github";
 import { ForgeLog } from "@/components/forge-log";
+import { site } from "@/lib/site";
 
 type HeroProps = {
   projects: Project[];
@@ -17,9 +18,9 @@ export function Hero({ projects, meta }: HeroProps) {
   const reduce = useReducedMotion();
 
   const headlineLines = [
-    "Working software",
-    "in weeks. Fixed price.",
-    "You own everything.",
+    "Find 5+ hours a week",
+    "hiding in your business.",
+    "Guaranteed — or it's free.",
   ];
 
   if (reduce) {
@@ -30,13 +31,15 @@ export function Hero({ projects, meta }: HeroProps) {
           <div className="grid grid-cols-1 min-[901px]:grid-cols-[1.08fr_0.92fr] gap-10 min-[901px]:gap-[54px] items-center">
             <div>
               <Eyebrow />
-              <h1 className="font-display font-bold leading-[1.02] tracking-[-0.02em] text-[clamp(2.6rem,6.4vw,5rem)] mt-[26px] mb-6">
+              <h1 className="font-display font-bold leading-[1.02] tracking-[-0.02em] text-[clamp(2.4rem,5.8vw,4.4rem)] mt-[26px] mb-6">
                 {headlineLines.map((line) => (
                   <span key={line} className="block">{line}</span>
                 ))}
               </h1>
-              <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — capital-markets discipline: fixed prices underwritten in writing, risk on our side, zero mandatory meetings.
+              <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[48ch]">
+                A fixed-fee AI Tools Assessment maps your biggest time-drains to
+                the right tools in two weeks — with a 4-day quick-start plan and
+                an honest ROI. Fully credited if you build with us.
               </p>
               <HeroCTAs />
               <TrustBar />
@@ -69,7 +72,7 @@ export function Hero({ projects, meta }: HeroProps) {
             >
               <Eyebrow />
             </motion.div>
-            <h1 className="font-display font-bold leading-[1.02] tracking-[-0.02em] text-[clamp(2.6rem,6.4vw,5rem)] mt-[26px] mb-6">
+            <h1 className="font-display font-bold leading-[1.02] tracking-[-0.02em] text-[clamp(2.4rem,5.8vw,4.4rem)] mt-[26px] mb-6">
               {headlineLines.map((line, i) => (
                 <span key={line} className="block overflow-hidden">
                   <motion.span
@@ -89,13 +92,15 @@ export function Hero({ projects, meta }: HeroProps) {
               ))}
             </h1>
             <motion.p
-              className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]"
+              className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[48ch]"
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1, transition: { duration: 0.7, ease } },
               }}
             >
-              We design, build, and ship full-stack web apps, fintech tools, and on-chain platforms — capital-markets discipline: fixed prices underwritten in writing, risk on our side, zero mandatory meetings.
+              A fixed-fee AI Tools Assessment maps your biggest time-drains to
+              the right tools in two weeks — with a 4-day quick-start plan and
+              an honest ROI. Fully credited if you build with us.
             </motion.p>
             <motion.div
               variants={{
@@ -131,7 +136,7 @@ export function Hero({ projects, meta }: HeroProps) {
 function Eyebrow() {
   return (
     <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-      AI-Native Product Studio
+      AI Tools Assessment · {site.assessmentPrice} {site.currency}
     </span>
   );
 }
@@ -140,19 +145,19 @@ function HeroCTAs() {
   return (
     <div className="flex gap-3.5 mt-9 flex-wrap max-[520px]:flex-col max-[520px]:items-stretch">
       <Link
-        href="#contact"
+        href="#assessment"
         className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 max-[520px]:justify-center"
       >
-        Get a fixed quote in 48h
+        Book your assessment
         <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
           ↗
         </span>
       </Link>
       <Link
-        href="#work"
+        href="#how-it-works"
         className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 max-[520px]:justify-center"
       >
-        See the work
+        See how it works
       </Link>
     </div>
   );
@@ -160,9 +165,9 @@ function HeroCTAs() {
 
 function TrustBar() {
   const items = [
-    "4 products shipped",
-    "Capital-markets rigor",
-    "Your repo, day one",
+    "5 hrs/week or full refund",
+    "Fully credited toward build",
+    "We ship software, not just advice",
   ];
   return (
     <div className="flex gap-6 flex-wrap mt-[34px] pt-6 border-t border-hair">

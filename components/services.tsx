@@ -1,15 +1,52 @@
+import Link from "next/link";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/reveal";
 
 const services = [
   {
-    name: "Launch Pack",
-    price: "$1,950",
-    priceNote: " USD",
-    time: "5 days",
-    desc: "Validate before you build. A conversion-focused landing page, waitlist with email capture, analytics, and basic SEO — deployed on your domain.",
-    guar: "Live in 5 business days from content handoff — or it's free.",
-    bestfor: "↳ Best for: pre-build founders who need validation signal.",
+    name: "Quick Automation",
+    price: "From $1,950",
+    priceNote: " CAD",
+    time: "Days, not weeks",
+    desc: "A single workflow or integration that kills a recurring manual task — connected to the tools you already use.",
+    guar: "Scoped and priced in writing before work starts.",
+    bestfor: "↳ Best for: one painful process you want gone this month.",
+    feature: false,
+    badge: null,
+    fullWidth: false,
+  },
+  {
+    name: "Knowledge System",
+    price: "$3,000–$3,500",
+    priceNote: " CAD",
+    time: "1–2 weeks",
+    desc: "Process redesign plus a custom GPT / knowledge base / SOP system your team actually uses — not another unused Notion wiki.",
+    guar: null,
+    bestfor: "↳ Best for: teams drowning in tribal knowledge and repeat questions.",
+    feature: false,
+    badge: null,
+    fullWidth: false,
+  },
+  {
+    name: "Custom Claude Skills",
+    price: "$3,000–$5,000",
+    priceNote: " CAD",
+    time: "1–3 weeks",
+    desc: "A skill suite built with you — reusable AI workflows wired to your real processes, not generic prompts.",
+    guar: "Done-with-you sessions so your team can extend what we leave behind.",
+    bestfor: "↳ Best for: operators ready to productize how they work with AI.",
+    feature: true,
+    badge: "High leverage",
+    fullWidth: false,
+  },
+  {
+    name: "Directory Platform",
+    price: "$5,500",
+    priceNote: " CAD",
+    time: "1–2 weeks",
+    desc: "Your own discovery platform: interactive maps, geo search, structured listings, ratings and reviews, user lists, and an admin panel — on a live engine you can inspect today.",
+    guar: "Built on a shipped product in our portfolio.",
+    bestfor: "↳ Best for: niche communities, associations, local media.",
     feature: false,
     badge: null,
     fullWidth: false,
@@ -17,78 +54,55 @@ const services = [
   {
     name: "MVP Sprint",
     price: "$9,500",
-    priceNote: " USD",
+    priceNote: " CAD",
     time: "2–4 weeks",
-    desc: "A real, working product: auth, payments, database, your core workflow done properly, admin basics. Includes deploy, domain, analytics, handover doc, and 30 days of Care.",
+    desc: "A real working product: auth, payments, database, your core workflow, admin basics. Deploy, domain, analytics, handover, and 30 days of Care.",
     guar: "The final 50% is only due when it ships working as the written spec says.",
     bestfor: "↳ Best for: operators who need v1 shipped, not a 6-month agency.",
     feature: true,
-    badge: "Flagship",
-    fullWidth: false,
-  },
-  {
-    name: "Directory Platform",
-    price: "$5,500",
-    priceNote: " USD",
-    time: "1–2 weeks",
-    desc: "Your own Beli-style platform: interactive maps, geo search, structured listings, ratings and reviews, user lists, and an admin panel — under your brand, on our proven engine.",
-    guar: "Built on a live, shipped codebase you can inspect today.",
-    bestfor: "↳ Best for: creators, niche publications, associations, local media.",
-    feature: false,
-    badge: null,
-    fullWidth: false,
-  },
-  {
-    name: "Web3 Build",
-    price: "From $12,000",
-    priceNote: " USD · scoped",
-    time: "Quoted per project",
-    desc: "On-chain products built properly: NFT mints, dApp frontends, analytics dashboards, custom contracts, wallet integration. Security-reviewed contract architecture on Avalanche or any EVM chain. Scoped and priced per project — third-party audits quoted and billed separately.",
-    guar: "Disclosed teams only. We decline stealth-pump operations.",
-    bestfor: "↳ Best for: established crypto teams building real, audited products.",
-    feature: false,
-    badge: null,
+    badge: "Flagship build",
     fullWidth: false,
   },
   {
     name: "Sprint Subscription",
     price: "$3,950",
-    priceNote: " USD/mo · founding rate",
+    priceNote: " CAD/mo",
     time: "Ongoing · pause anytime",
-    desc: "Your product team on tap. Unlimited request queue, one active build at a time, most requests shipped in 2–4 business days. Pause anytime and unused days bank. Cancel anytime. The founding rate locks for life — it becomes $4,950 USD/mo once the founding seats are gone.",
+    desc: "Rolling build capacity. Unlimited request queue, one active build at a time, most requests shipped in 2–4 business days. Pause anytime; unused days bank.",
     guar: null,
-    bestfor: "↳ Best for: post-launch founders who need continuous shipping without hiring.",
-    feature: true,
-    badge: "2 seats only",
-    fullWidth: true,
+    bestfor: "↳ Best for: post-launch teams that need continuous shipping without hiring.",
+    feature: false,
+    badge: null,
+    fullWidth: false,
   },
 ];
 
 export function Services() {
   return (
-    <section className="py-[120px] max-[900px]:py-[84px]" id="services">
+    <section className="py-[120px] max-[900px]:py-[84px]" id="build">
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="flex justify-between items-end gap-6 mb-[30px] flex-wrap">
           <div>
             <Reveal>
               <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-                Services
+                Build
               </span>
             </Reveal>
             <Reveal>
               <h2
                 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
               >
-                Fixed price. Fixed scope.
+                When off-the-shelf
                 <br />
-                Real capacity limits.
+                isn&apos;t enough.
               </h2>
             </Reveal>
           </div>
           <Reveal>
             <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch] mt-[18px]">
-              Pick a deliverable, not a retainer. Every engagement is scoped and
-              priced in writing before a dollar changes hands.
+              The assessment&apos;s major-projects quadrant maps here. Fixed
+              price, fixed scope, your repo from day one. Assessment fee credited
+              in full if you book within 90 days.
             </p>
           </Reveal>
         </div>
@@ -106,12 +120,9 @@ export function Services() {
 
         <div className="grid grid-cols-1 min-[901px]:grid-cols-2 gap-[22px] mt-2">
           {services.map((svc) => (
-            <Reveal
-              key={svc.name}
-              className={svc.fullWidth ? "min-[901px]:col-span-2" : ""}
-            >
+            <Reveal key={svc.name}>
               <div
-                className={`border rounded-[14px] p-[30px] bg-iron-raised flex flex-col transition-all duration-350 hover:-translate-y-1 hover:border-hair-strong relative ${
+                className={`border rounded-[14px] p-[30px] bg-iron-raised flex flex-col h-full transition-all duration-350 hover:-translate-y-1 hover:border-hair-strong relative ${
                   svc.feature
                     ? "border-[rgba(200,164,92,0.4)] bg-gradient-to-b from-[rgba(200,164,92,0.06)] to-iron-raised"
                     : "border-hair"
@@ -153,10 +164,20 @@ export function Services() {
             </Reveal>
           ))}
         </div>
-        <p className="font-mono text-xs text-smoke-dim text-center mt-6">
-          Care plans — ongoing stewardship — from $750 USD/mo: hosting,
-          monitoring, fixes, small tweaks. Attaches to any shipped build.
-        </p>
+
+        <Reveal>
+          <p className="font-mono text-xs text-smoke-dim text-center mt-8 max-w-[62ch] mx-auto leading-relaxed">
+            Care retainers — ongoing hosting, monitoring, fixes — from $149 / $379
+            / $799 CAD/mo. Token launchpad and on-chain infra live on a{" "}
+            <Link
+              href="/launchpad"
+              className="text-brass hover:text-brass-bright transition-colors underline underline-offset-2"
+            >
+              separate page
+            </Link>
+            .
+          </p>
+        </Reveal>
       </div>
     </section>
   );

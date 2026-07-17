@@ -68,7 +68,7 @@ type BrandLinkProps = {
 export function BrandLink({ className }: BrandLinkProps) {
   return (
     <Link
-      href="#top"
+      href="/"
       className={`flex items-center gap-3 font-display font-extrabold text-[18px] tracking-[-0.01em] ${className ?? ""}`}
     >
       <LogoBadge size={30} />

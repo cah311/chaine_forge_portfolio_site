@@ -12,7 +12,7 @@ export async function submitQuote(
   const build = String(fd.get("build") ?? "").trim();
   const email = String(fd.get("email") ?? "").trim();
   if (!build)
-    return { ok: false, msg: "Tell us what you're building first." };
+    return { ok: false, msg: "Tell us where time disappears first." };
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email))
     return { ok: false, msg: "Add a valid email so we can reply." };
 
@@ -22,15 +22,18 @@ export async function submitQuote(
       from: site.resendFrom,
       to: site.contactEmail,
       replyTo: email,
-      subject: `New project — ${fd.get("sku")}`,
-      text: `What: ${build}
-Offer: ${fd.get("sku")}
-Budget: ${fd.get("budget")}
+      subject: `Assessment request — ${fd.get("sku")}`,
+      text: `Time drains: ${build}
+Interest: ${fd.get("sku")}
+Team size: ${fd.get("budget")}
 Timeline: ${fd.get("timeline")}
 Links: ${fd.get("links")}
 Email: ${email}`,
     });
-    return { ok: true, msg: "Got it — we'll reply within 48 hours." };
+    return {
+      ok: true,
+      msg: "Got it — we'll reply within two business days.",
+    };
   } catch {
     return {
       ok: false,
