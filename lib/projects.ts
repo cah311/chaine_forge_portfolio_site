@@ -10,6 +10,11 @@ export type Project = {
   /** Extra screenshots for the case-study gallery. First entry should match `preview`. */
   gallery?: { src: string; label: string }[];
   blurb: string;
+  /**
+   * When false, hidden from homepage Work + forge log (case study route still exists).
+   * Used to demote employer-adjacent demos from the SMB-facing portfolio.
+   */
+  showOnHome?: boolean;
   caseStudy: {
     problem: string;
     approach: string;
@@ -26,6 +31,7 @@ export const projects: Project[] = [
     live: "https://mosaicfinance.ai",
     tag: "Fintech · Demo",
     lang: "TypeScript",
+    showOnHome: false,
     preview: "/work/mosaic-finance.png",
     gallery: [
       { src: "/work/mosaic-finance.png", label: "Landing page" },
@@ -125,4 +131,9 @@ export const projects: Project[] = [
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
+}
+
+/** Portfolio pieces shown on the homepage (excludes demoted demos). */
+export function getHomeProjects(): Project[] {
+  return projects.filter((p) => p.showOnHome !== false);
 }

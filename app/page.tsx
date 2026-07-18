@@ -10,22 +10,23 @@ import { Why } from "@/components/why";
 import { Faq } from "@/components/faq";
 import { QuoteForm } from "@/components/quote-form";
 import { Footer } from "@/components/footer";
-import { projects } from "@/lib/projects";
+import { getHomeProjects } from "@/lib/projects";
 import { getAllRepoMeta } from "@/lib/github";
 
 export default async function Home() {
-  const meta = await getAllRepoMeta(projects.map((p) => p.repo));
+  const homeProjects = getHomeProjects();
+  const meta = await getAllRepoMeta(homeProjects.map((p) => p.repo));
 
   return (
     <>
       <Nav />
       <main>
-        <Hero projects={projects} meta={meta} />
+        <Hero projects={homeProjects} meta={meta} />
         <Process />
         <RiskBand />
         <Services />
         <Concierge />
-        <WorkGrid projects={projects} meta={meta} />
+        <WorkGrid projects={homeProjects} meta={meta} />
         <Marquee />
         <Why />
         <Faq />

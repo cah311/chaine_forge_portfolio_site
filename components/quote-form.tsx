@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
+import { track } from "@vercel/analytics";
 import { submitQuote } from "@/app/actions/quote";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/lib/site";
@@ -33,6 +34,14 @@ export function QuoteForm() {
     ok: false,
     msg: "",
   });
+  const trackedSubmit = useRef(false);
+
+  useEffect(() => {
+    if (state.ok && !trackedSubmit.current) {
+      trackedSubmit.current = true;
+      track("assessment_form_submitted");
+    }
+  }, [state.ok]);
 
   return (
     <section
@@ -98,6 +107,7 @@ export function QuoteForm() {
                   href={site.stripeAssessmentUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => track("assessment_pay_clicked")}
                   className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group"
                 >
                   Pay {site.assessmentPrice} {site.currency} — lock your slot

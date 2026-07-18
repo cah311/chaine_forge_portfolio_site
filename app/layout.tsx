@@ -4,6 +4,7 @@ import {
   Hanken_Grotesk,
   IBM_Plex_Mono,
 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLdOrganization } from "@/components/json-ld-organization";
 import { rootMetadata } from "@/lib/metadata";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body>
         <JsonLdOrganization />
         {children}
+        <Analytics />
       </body>
     </html>
   );

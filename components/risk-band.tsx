@@ -15,7 +15,7 @@ const rows = [
   },
   {
     k: "CAPACITY",
-    v: "A limited number of assessments each month — every report is <b>hand-built</b>, not templated spam.",
+    v: "<b>8 assessment slots per month</b> — every report is hand-built, not templated spam.",
   },
   {
     k: "OWNERSHIP",

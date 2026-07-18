@@ -13,7 +13,6 @@ const services = [
     bestfor: "↳ Best for: one painful process you want gone this month.",
     feature: false,
     badge: null,
-    fullWidth: false,
   },
   {
     name: "Knowledge System",
@@ -25,7 +24,6 @@ const services = [
     bestfor: "↳ Best for: teams drowning in tribal knowledge and repeat questions.",
     feature: false,
     badge: null,
-    fullWidth: false,
   },
   {
     name: "Custom Claude Skills",
@@ -37,7 +35,6 @@ const services = [
     bestfor: "↳ Best for: operators ready to productize how they work with AI.",
     feature: true,
     badge: "High leverage",
-    fullWidth: false,
   },
   {
     name: "Directory Platform",
@@ -49,7 +46,6 @@ const services = [
     bestfor: "↳ Best for: niche communities, associations, local media.",
     feature: false,
     badge: null,
-    fullWidth: false,
   },
   {
     name: "MVP Sprint",
@@ -61,7 +57,17 @@ const services = [
     bestfor: "↳ Best for: operators who need v1 shipped, not a 6-month agency.",
     feature: true,
     badge: "Flagship build",
-    fullWidth: false,
+  },
+  {
+    name: "Care Retainer",
+    price: "$149 / $379 / $799",
+    priceNote: " CAD/mo",
+    time: "Ongoing · attaches to any shipped build",
+    desc: "Hosting, monitoring, fixes, and small tweaks so what we ship stays healthy. Three tiers by how hands-on you need us — priced so the smoothing layer is an easy yes at handover.",
+    guar: "Offered on every delivery email. Pause or cancel anytime.",
+    bestfor: "↳ Best for: teams that want the build maintained without hiring.",
+    feature: false,
+    badge: "Retainer",
   },
   {
     name: "Sprint Subscription",
@@ -73,7 +79,6 @@ const services = [
     bestfor: "↳ Best for: post-launch teams that need continuous shipping without hiring.",
     feature: false,
     badge: null,
-    fullWidth: false,
   },
 ];
 
@@ -167,8 +172,7 @@ export function Services() {
 
         <Reveal>
           <p className="font-mono text-xs text-smoke-dim text-center mt-8 max-w-[62ch] mx-auto leading-relaxed">
-            Care retainers — ongoing hosting, monitoring, fixes — from $149 / $379
-            / $799 CAD/mo. Token launchpad and on-chain infra live on a{" "}
+            Token launchpad and on-chain infra live on a{" "}
             <Link
               href="/launchpad"
               className="text-brass hover:text-brass-bright transition-colors underline underline-offset-2"

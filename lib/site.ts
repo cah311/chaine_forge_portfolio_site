@@ -9,7 +9,7 @@ export const site = {
   contactEmail: process.env.CONTACT_EMAIL ?? "hello@chainforgelabs.io",
   availability:
     process.env.AVAILABILITY ??
-    "Limited assessments each month · hand-built reports",
+    "8 assessment slots / month · hand-built reports",
   githubOrg: process.env.GITHUB_ORG ?? "",
   resendFrom:
     process.env.RESEND_FROM ?? "Chain Forge <quotes@chainforgelabs.io>",
