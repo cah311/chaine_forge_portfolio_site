@@ -32,7 +32,7 @@ Email: ${email}`,
     });
     return {
       ok: true,
-      msg: "Got it — we'll reply within two business days.",
+      msg: "Request received. Pay below to lock your assessment slot.",
     };
   } catch {
     return {

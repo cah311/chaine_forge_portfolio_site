@@ -15,6 +15,10 @@ export const site = {
     process.env.RESEND_FROM ?? "Chain Forge <quotes@chainforgelabs.io>",
   assessmentPrice: "$1,500",
   currency: "CAD",
+  /** Live Stripe Payment Link for the AI Tools Assessment ($1,500 CAD). */
+  stripeAssessmentUrl:
+    process.env.NEXT_PUBLIC_STRIPE_ASSESSMENT_URL ??
+    "https://buy.stripe.com/bJe6oIddy8VUeOx2Hobo400",
 } as const;
 
 export const navLinks = [
