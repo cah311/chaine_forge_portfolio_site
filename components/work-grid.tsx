@@ -31,10 +31,9 @@ export function WorkGrid({ projects, meta }: WorkGridProps) {
           </div>
           <Reveal>
             <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch] mt-[18px]">
-              Live products we built ourselves — demos you can click, code you
-              can inspect. This is why the assessment&apos;s &quot;major
-              projects&quot; quadrant is honest: we can actually build what we
-              recommend.
+              Four products we built ourselves — live demos, public code. This is
+              why the assessment&apos;s &quot;major projects&quot; quadrant is
+              honest: we can actually build what we recommend.
             </p>
           </Reveal>
         </div>

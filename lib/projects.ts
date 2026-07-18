@@ -31,7 +31,6 @@ export const projects: Project[] = [
     live: "https://mosaicfinance.ai",
     tag: "Fintech · Demo",
     lang: "TypeScript",
-    showOnHome: false,
     preview: "/work/mosaic-finance.png",
     gallery: [
       { src: "/work/mosaic-finance.png", label: "Landing page" },
