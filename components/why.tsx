@@ -19,7 +19,7 @@ const cells = [
   {
     n: "04",
     title: "Vertical-agnostic by design",
-    desc: "If you have 2–20 people, real workflows, and a budget for $1,500, we can assess you. We decline only where we have a hard conflict — not because your industry isn't trendy.",
+    desc: "If you have 2–20 people, real workflows, and a budget for $1,500, we can assess you. A few verticals sit on a shortlist while we sequence capacity — not because they aren't a fit long term.",
   },
   {
     n: "05",

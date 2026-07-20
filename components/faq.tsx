@@ -14,7 +14,7 @@ const items = [
   },
   {
     q: "Who is this for?",
-    a: "Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a $1,500 assessment. Vertical doesn't matter for the assessment itself. We decline financial advisors, wealth managers, and physician-wealth-adjacent firms for conflict reasons.",
+    a: "Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a $1,500 assessment. Most verticals are fair game. Advice-, wealth-, and healthcare-practice-adjacent firms are a natural long-term fit — we hold those on a shortlist while we sequence capacity, then circle back. Not a hard no.",
   },
   {
     q: "Do you only recommend tools you sell?",
