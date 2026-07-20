@@ -27,6 +27,12 @@ export function Footer() {
               Book
             </Link>
             <Link
+              href="/assessment-terms"
+              className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+            >
+              Terms
+            </Link>
+            <Link
               href="/launchpad"
               className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
             >

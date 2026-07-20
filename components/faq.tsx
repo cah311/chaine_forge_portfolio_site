@@ -1,16 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
+import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 
-const items = [
+const items: { q: string; a: ReactNode }[] = [
   {
     q: "What exactly do I get for $1,500?",
     a: "A 45-minute recorded discovery call, AI analysis of the transcript, a written report (executive summary, effort-vs-impact matrix, tool recommendations with cost/setup/time saved, a 4-day quick-start plan, ROI slide, and a major-projects quadrant), plus a 30-minute review call. Fully credited toward any implementation booked within 90 days.",
   },
   {
     q: "What's the 5-hours guarantee, precisely?",
-    a: "We identify at least five reclaimable hours per week in your current operations — opportunities that are real and actionable, not already implemented. If we can't, your $1,500 is refunded in full. Terms are disclosed before you pay.",
+    a: (
+      <>
+        We identify at least five reclaimable hours per week — opportunities that
+        are real and actionable, not already implemented. If we can&apos;t, your
+        $1,500 is refunded in full. Full definitions, refund mechanics, and
+        recording consent are in the{" "}
+        <Link
+          href="/assessment-terms"
+          className="text-brass hover:text-brass-bright underline underline-offset-2"
+        >
+          Assessment Engagement Terms
+        </Link>
+        , disclosed before you pay.
+      </>
+    ),
   },
   {
     q: "Who is this for?",

@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: absoluteUrl("/assessment-terms"),
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
     ...projects.map((project) => ({
       url: absoluteUrl(`/work/${project.slug}`),
       lastModified: now,

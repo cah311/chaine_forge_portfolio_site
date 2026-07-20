@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { submitQuote } from "@/app/actions/quote";
 import { Reveal } from "@/components/reveal";
@@ -264,8 +265,14 @@ export function QuoteForm() {
 
                 <p className="font-mono text-xs text-smoke-dim mt-1">
                   Fits 2–20 people with clear workflows go straight to checkout.
-                  A few verticals are on a short waitlist for capacity reasons —
-                  we&apos;ll keep your spot.
+                  A few verticals are on a short waitlist.{" "}
+                  <Link
+                    href="/assessment-terms"
+                    className="text-smoke hover:text-brass underline underline-offset-2 transition-colors"
+                  >
+                    Engagement terms
+                  </Link>{" "}
+                  disclosed before you pay.
                 </p>
               </form>
             )}
@@ -277,6 +284,8 @@ export function QuoteForm() {
 }
 
 function PaySuccess({ msg }: { msg: string }) {
+  const [agreed, setAgreed] = useState(false);
+
   return (
     <div className="grid gap-5 rounded-[14px] border border-hair-strong bg-iron-raised p-7">
       <p className="font-mono text-[12.5px] tracking-[0.12em] uppercase text-brass">
@@ -289,18 +298,48 @@ function PaySuccess({ msg }: { msg: string }) {
         {msg} After checkout, we&apos;ll email you within two business days to
         book discovery. Not a fit? We refund before work starts.
       </p>
-      <a
-        href={site.stripeAssessmentUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => track("assessment_pay_clicked")}
-        className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group"
-      >
-        Pay {site.assessmentPrice} {site.currency} — lock your slot
-        <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
-          ↗
+      <label className="flex items-start gap-3 cursor-pointer text-[13.5px] text-smoke leading-relaxed">
+        <input
+          type="checkbox"
+          checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+          className="mt-1 accent-[var(--brass)] w-4 h-4 flex-none"
+        />
+        <span>
+          I agree to the{" "}
+          <Link
+            href="/assessment-terms"
+            target="_blank"
+            className="text-brass hover:text-brass-bright underline underline-offset-2"
+          >
+            Assessment Engagement Terms
+          </Link>{" "}
+          — including the 5-hour guarantee, refund rules, 90-day credit, and
+          discovery call recording.
         </span>
-      </a>
+      </label>
+      {agreed ? (
+        <a
+          href={site.stripeAssessmentUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track("assessment_pay_clicked")}
+          className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group"
+        >
+          Pay {site.assessmentPrice} {site.currency} — lock your slot
+          <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
+            ↗
+          </span>
+        </a>
+      ) : (
+        <button
+          type="button"
+          disabled
+          className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] opacity-40 cursor-not-allowed"
+        >
+          Pay {site.assessmentPrice} {site.currency} — lock your slot
+        </button>
+      )}
       <p className="font-mono text-xs text-smoke-dim">
         Secure checkout via Stripe. Questions?{" "}
         <a
