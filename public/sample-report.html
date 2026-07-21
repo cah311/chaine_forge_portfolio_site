@@ -4,159 +4,157 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sample AI Tools Assessment — Chain Forge Labs</title>
-<meta name="description" content="See a real AI Tools Assessment artifact — fictional client, real process. Effort-vs-impact matrix, quick wins, 4-day plan, and ROI. $1,500 CAD, credited if you build with us.">
+<meta name="description" content="See a complete AI Tools Assessment — fictional client, real process. Effort-vs-impact matrix, quick wins, what we ruled out, 4-day plan, and ROI. $1,500 CAD.">
 <link rel="canonical" href="https://chainforgelabs.io/sample-report">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_CA">
 <meta property="og:site_name" content="Chain Forge Labs">
 <meta property="og:url" content="https://chainforgelabs.io/sample-report">
 <meta property="og:title" content="Sample AI Tools Assessment — Chain Forge Labs">
-<meta property="og:description" content="See a real AI Tools Assessment artifact — fictional client, real process. Effort-vs-impact matrix, quick wins, 4-day plan, and ROI. $1,500 CAD, credited if you build with us.">
+<meta property="og:description" content="A complete sample assessment, start to finish. Fictional landscaping company, real process. See exactly what $1,500 CAD buys.">
 <meta property="og:image" content="https://chainforgelabs.io/opengraph-image">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sample AI Tools Assessment — Chain Forge Labs">
-<meta name="twitter:description" content="See a real AI Tools Assessment artifact — fictional client, real process. $1,500 CAD — 5 hours a week identified, or your money back.">
+<meta name="twitter:description" content="A complete sample assessment — fictional client, real process. $1,500 CAD.">
 <meta name="twitter:image" content="https://chainforgelabs.io/opengraph-image">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root{
-  --paper:#f4ead9;      /* brand cream — the page */
-  --paper2:#ede1cc;     /* tinted panel */
-  --ink:#16100b;        /* brand umber — the ink */
-  --ink2:#4a3d2e;       /* soft ink */
-  --dim:#8a7a64;        /* captions */
-  --rule:#d8c9b0;       /* hairlines */
-  --orange:#f2701d;     /* accent — spent sparingly */
-  --amber:#b97a14;      /* darkened amber for legibility on cream */
+  --paper:#f4ead9;
+  --paper2:#ede1cc;
+  --ink:#16100b;
+  --ink2:#4a3d2e;
+  --dim:#8a7a64;
+  --rule:#d8c9b0;
+  --orange:#f2701d;
+  --amber:#b97a14;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
   --display:'Fraunces',Georgia,serif;
   --body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.6;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;}
 .page{max-width:760px;margin:0 auto;padding:0 44px 64px;}
 
-/* sticky conversion bar — hidden when printing */
-.sitebar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);margin:0 -44px;padding:12px 44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;border-bottom:2px solid var(--orange);}
-.sitebar a.back{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:#dfc9a6;text-decoration:none;}
-.sitebar a.back:hover{color:var(--paper);}
-.sitebar a.cta{font-family:var(--body);font-size:13px;font-weight:600;background:var(--orange);color:#1a140a;text-decoration:none;padding:9px 14px;border-radius:8px;}
-.sitebar a.cta:hover{filter:brightness(1.08);}
-@media (max-width:620px){.sitebar{margin:0 -20px;padding:12px 20px;}}
-@media print{.sitebar,.book-cta{display:none;}}
+/* ---------- sample banner ---------- */
+.sampleband{margin:0 -44px;background:#efe0c4;border-bottom:2px solid var(--ink);padding:12px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink);line-height:1.65;}
+.sampleband b{font-weight:700;letter-spacing:.14em;}
 
 /* ---------- masthead ---------- */
 .mast{background:var(--ink);color:var(--paper);margin:0 -44px;padding:40px 44px 36px;}
 .mast .brand{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px;}
 .mast .brand::before{content:"";width:22px;height:2px;background:var(--orange);}
-.mast h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,42px);letter-spacing:-.01em;margin:14px 0 6px;}
-.mast .client{font-family:var(--display);font-weight:600;font-size:clamp(20px,3.4vw,26px);color:#dfc9a6;}
-.mast .meta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a8977f;margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 22px;}
+.mast h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,7vw,42px);letter-spacing:-.01em;margin:14px 0 6px;line-height:1.1;}
+.mast .client{font-family:var(--display);font-weight:600;font-size:clamp(19px,4.5vw,26px);color:#dfc9a6;}
+.mast .meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a8977f;margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 22px;}
 .mast .meta b{color:var(--paper);font-weight:500;}
 
-/* ---------- section scaffolding ---------- */
+/* ---------- scaffolding ---------- */
 section{margin-top:44px;}
-.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.eyebrow{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);}
-h2{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.01em;margin-bottom:14px;}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(21px,4.6vw,24px);letter-spacing:-.01em;margin-bottom:14px;line-height:1.2;}
 p{color:var(--ink2);}
 .small{font-size:12.5px;color:var(--dim);}
 
-/* provenance tags — the signature */
-.prov{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.16em;padding:2px 6px;border-radius:4px;vertical-align:2px;margin-left:6px;}
+.prov{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.14em;padding:2px 6px;border-radius:4px;vertical-align:2px;margin-left:5px;white-space:nowrap;display:inline-block;}
 .prov.stated{color:#1d4a1d;background:#d7e4c6;border:1px solid #b5cd9c;}
 .prov.inferred{color:#5a3d10;background:#eddbb4;border:1px solid #d9bd85;}
+.legend{font-size:12.5px;color:var(--dim);margin:-6px 0 14px;line-height:2;}
 
 /* ---------- exec summary ---------- */
 .exec{display:grid;grid-template-columns:1fr 210px;gap:26px;align-items:start;}
-.exec .drains{border-left:3px solid var(--orange);padding-left:16px;margin:14px 0;}
-.exec .drains p{margin:6px 0;color:var(--ink);}
-.exec .drains p b{font-weight:700;}
+.headline{font-family:var(--display);font-weight:700;font-size:clamp(22px,5vw,27px);line-height:1.25;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px;}
+.headline em{font-style:normal;color:var(--orange);}
+.exec .drains{border-left:3px solid var(--orange);padding-left:16px;margin:16px 0;}
+.exec .drains p{margin:6px 0;color:var(--ink);font-size:14px;}
 .stamp{border:2.5px solid var(--ink);border-radius:10px;padding:18px 16px;text-align:center;background:var(--paper2);}
-.stamp .lbl{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);}
+.stamp .lbl{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);}
 .stamp .big{font-family:var(--display);font-weight:700;font-size:46px;line-height:1;color:var(--orange);margin:8px 0 2px;}
-.stamp .unit{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);}
-.stamp .focus{margin-top:12px;padding-top:10px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);}
+.stamp .unit{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);}
+.stamp .focus{margin-top:12px;padding-top:10px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);}
 .rulebox{margin-top:20px;background:var(--paper2);border:1px solid var(--rule);border-radius:10px;padding:14px 18px;font-size:13.5px;color:var(--ink2);}
 .rulebox b{color:var(--ink);}
 
-/* ---------- 2x2 matrix ---------- */
+/* ---------- matrix ---------- */
 .matrix{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule);border:2px solid var(--ink);border-radius:12px;overflow:hidden;margin:10px 0 8px;}
 .cell{background:var(--paper);padding:16px 18px;min-height:104px;}
-.cell .clbl{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;}
+.cell .clbl{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;}
 .cell ul{list-style:none;}
 .cell li{font-size:13px;color:var(--ink2);padding:2px 0;}
 .cell.qw{background:#efe0c4;}
 .cell.qw .clbl{color:var(--amber);}
 .cell.qw li{color:var(--ink);font-weight:600;}
-.cell.mp .clbl{color:var(--ink2);}
-.axes{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);padding:0 4px;}
+.axes{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding:0 4px;}
 .matrix-note{font-style:italic;color:var(--ink2);font-size:13.5px;margin-top:12px;}
 
-/* ---------- quick wins at a glance ---------- */
-.qw-row{display:flex;align-items:baseline;gap:14px;padding:11px 4px;border-bottom:1px solid var(--rule);}
+/* ---------- quick wins ---------- */
+.qw-row{display:flex;align-items:baseline;gap:14px;padding:12px 4px;border-bottom:1px solid var(--rule);}
 .qw-row:last-of-type{border-bottom:0;}
-.qw-row .pain{flex:1;color:var(--ink2);}
-.qw-row .to{font-family:var(--mono);color:var(--orange);font-size:13px;}
-.qw-row .tool{font-weight:700;white-space:nowrap;}
+.qw-row .pain{flex:1;color:var(--ink2);font-size:14px;}
+.qw-row .to{font-family:var(--mono);color:var(--orange);font-size:13px;flex:0 0 auto;}
+.qw-row .tool{font-weight:700;text-align:right;flex:0 0 auto;max-width:44%;}
 
-/* ---------- recommended solutions ---------- */
+/* ---------- tools ---------- */
 .tool{border:1px solid var(--rule);border-left:4px solid var(--orange);border-radius:0 12px 12px 0;padding:20px 22px;margin:16px 0;background:#f7efe1;break-inside:avoid;}
-.tool h3{font-family:var(--display);font-weight:700;font-size:19px;}
-.tool .solves{font-size:13.5px;color:var(--ink2);font-style:italic;margin:4px 0 12px;}
-.datastrip{display:flex;flex-wrap:wrap;gap:8px 26px;font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:10px 14px;margin-bottom:12px;}
-.datastrip span b{font-weight:700;}
-.datastrip .k{color:var(--dim);letter-spacing:.08em;text-transform:uppercase;font-size:9.5px;display:block;}
+.tool h3{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.25;}
+.tool .solves{font-size:13.5px;color:var(--ink2);font-style:italic;margin:5px 0 12px;}
+.datastrip{display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:11px 14px;margin-bottom:12px;}
+.datastrip .k{color:var(--dim);letter-spacing:.06em;text-transform:uppercase;font-size:9.5px;display:block;margin-bottom:1px;}
 .tool p{font-size:13.5px;margin:7px 0;}
 .tool p b{color:var(--ink);}
-.tool .first{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--paper2);border-radius:7px;padding:8px 12px;margin-top:11px;}
-.tool .first::before{content:"FIRST STEP → ";color:var(--amber);font-weight:700;letter-spacing:.1em;font-size:9.5px;}
+.tool .first{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--paper2);border-radius:7px;padding:9px 12px;margin-top:11px;line-height:1.55;}
+.tool .first::before{content:"FIRST STEP → ";color:var(--amber);font-weight:700;letter-spacing:.08em;font-size:9.5px;}
+.stacktotal{margin-top:18px;font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper2);border:1px solid var(--rule);border-radius:8px;padding:12px 15px;line-height:1.7;}
+.stacktotal .small{color:var(--dim);font-family:var(--body);}
+
+/* ---------- ruled out ---------- */
+.ruledout{border:1px solid var(--rule);border-radius:12px;background:#f7efe1;padding:6px 22px;margin-top:8px;}
+.ro{padding:16px 0;border-bottom:1px solid var(--rule);}
+.ro:last-child{border-bottom:0;}
+.ro .rohead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px;}
+.ro .roname{font-family:var(--display);font-weight:700;font-size:16.5px;color:var(--ink);}
+.ro .roprice{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--dim);border:1px solid var(--rule);border-radius:20px;padding:2px 9px;background:var(--paper);white-space:nowrap;}
+.ro p{font-size:13.5px;margin:0;}
+.ro p b{color:var(--ink);}
+.nocommission{margin-top:16px;border-left:3px solid var(--amber);padding:4px 0 4px 16px;font-size:13.5px;color:var(--ink2);}
+.nocommission b{color:var(--ink);}
 
 /* ---------- 4-day plan ---------- */
 table{width:100%;border-collapse:collapse;margin:8px 0;}
-th{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);text-align:left;padding:8px 10px;border-bottom:2px solid var(--ink);}
-td{padding:11px 10px;border-bottom:1px solid var(--rule);font-size:13.5px;color:var(--ink2);vertical-align:top;}
+th{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);text-align:left;padding:8px 10px;border-bottom:2px solid var(--ink);}
+td{padding:12px 10px;border-bottom:1px solid var(--rule);font-size:13.5px;color:var(--ink2);vertical-align:top;}
 td.day{font-family:var(--display);font-weight:700;font-size:17px;color:var(--orange);width:44px;}
 td b{color:var(--ink);}
 
-/* ---------- financial ledger ---------- */
-.formula{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--ink);color:var(--paper);border-radius:8px;padding:12px 16px;margin-bottom:14px;letter-spacing:.02em;}
-.formula b{color:var(--orange);}
+/* ---------- ledger ---------- */
+.formula{font-family:var(--mono);font-size:12px;background:var(--ink);color:var(--paper);border-radius:8px;padding:12px 16px;margin-bottom:14px;letter-spacing:.01em;line-height:1.7;}
 .ledger{border:2px solid var(--ink);border-radius:12px;overflow:hidden;}
-.led-row{display:flex;justify-content:space-between;align-items:baseline;padding:12px 18px;border-bottom:1px solid var(--rule);background:var(--paper);}
+.led-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 18px;border-bottom:1px solid var(--rule);background:var(--paper);}
 .led-row .l{color:var(--ink2);font-size:13.5px;}
-.led-row .v{font-family:var(--mono);font-size:14px;color:var(--ink);font-weight:500;}
+.led-row .v{font-family:var(--mono);font-size:14px;color:var(--ink);font-weight:500;white-space:nowrap;}
 .led-row.total{background:var(--ink);border-bottom:0;}
 .led-row.total .l{color:var(--paper);font-weight:700;font-size:14.5px;}
-.led-row.total .v{color:var(--orange);font-weight:700;font-size:19px;}
+.led-row.total .v{color:var(--orange);font-weight:700;font-size:18px;}
 .guarantee{font-size:12.5px;color:var(--dim);font-style:italic;margin-top:12px;}
 
-/* ---------- major projects ---------- */
+/* ---------- projects ---------- */
 .project{border:1.5px dashed var(--ink2);border-radius:12px;padding:18px 20px;margin:14px 0;break-inside:avoid;}
-.project h3{font-family:var(--display);font-weight:700;font-size:18px;}
-.project .quote{font-style:italic;color:var(--ink2);font-size:13.5px;margin:4px 0 10px;}
-.project p{font-size:13.5px;margin:5px 0;}
-.project .range{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper2);border-radius:7px;padding:8px 12px;display:inline-block;margin-top:8px;}
+.project h3{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.25;}
+.project .quote{font-style:italic;color:var(--ink2);font-size:13.5px;margin:5px 0 10px;}
+.project p{font-size:13.5px;margin:6px 0;}
+.project .range{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--paper2);border-radius:7px;padding:9px 12px;display:inline-block;margin-top:10px;line-height:1.6;}
 .project .range b{color:var(--orange);}
-.credit{margin-top:16px;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink);background:#efe0c4;border:1px solid var(--rule);border-radius:9px;padding:12px 16px;}
+.credit{margin-top:16px;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--ink);background:#efe0c4;border:1px solid var(--rule);border-radius:9px;padding:13px 16px;line-height:1.7;}
 
-/* ---------- next steps + footer ---------- */
+/* ---------- next + footer ---------- */
 ol.next{margin:8px 0 0 20px;}
-ol.next li{padding:6px 0;color:var(--ink2);}
+ol.next li{padding:7px 0;color:var(--ink2);}
 ol.next li b{color:var(--ink);}
-.foot{margin-top:52px;padding-top:18px;border-top:2px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);}
+.foot{margin-top:52px;padding-top:18px;border-top:2px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);}
 .foot b{color:var(--ink);font-weight:700;}
-
-
-/* ---------- sample banner + legend + stack total ---------- */
-.sampleband{margin:0 -44px;background:#efe0c4;border-bottom:2px solid var(--ink);padding:12px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink);line-height:1.6;}
-.sampleband b{color:var(--ink);font-weight:700;letter-spacing:.14em;}
-.legend{font-family:var(--body);font-size:12.5px;color:var(--dim);margin:-6px 0 12px;}
-.stacktotal{margin-top:16px;font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper2);border:1px solid var(--rule);border-radius:8px;padding:11px 14px;}
-.stacktotal .small{color:var(--dim);font-family:var(--body);}
-@media (max-width:620px){.sampleband{margin:0 -20px;padding:10px 20px;}}
 
 /* ---------- print ---------- */
 @media print{
@@ -164,65 +162,115 @@ ol.next li b{color:var(--ink);}
   body{font-size:13px;}
   .page{max-width:none;padding:0 52px 40px;}
   .mast{margin:0 -52px;padding:36px 52px 30px;}
+  .sampleband{margin:0 -52px;padding:12px 52px;}
   section{margin-top:30px;}
-  section, .ledger, .matrix{break-inside:avoid;}
-  .tool, .project{break-inside:avoid;}
-  #solutions, #financial, #projects{break-before:page;}
+  section,.ledger,.matrix,.ruledout{break-inside:avoid;}
+  .tool,.project,.ro{break-inside:avoid;}
+  #solutions,#financial,#projects{break-before:page;}
 }
+
+/* ---------- tablet ---------- */
+@media (max-width:760px){
+  .page{padding:0 28px 56px;}
+  .mast{margin:0 -28px;padding:34px 28px 30px;}
+  .sampleband{margin:0 -28px;padding:11px 28px;}
+  .exec{grid-template-columns:1fr 180px;gap:20px;}
+}
+
+/* ---------- mobile ---------- */
 @media (max-width:620px){
-  .page{padding:0 20px 48px;}
-  .mast{margin:0 -20px;padding:32px 20px 28px;}
-  .exec{grid-template-columns:1fr;}
+  body{font-size:15.5px;}
+  .page{padding:0 18px 48px;}
+  .mast{margin:0 -18px;padding:30px 18px 26px;}
+  .sampleband{margin:0 -18px;padding:11px 18px;font-size:10.5px;}
+  section{margin-top:34px;}
+
+  /* exec: stamp first, full width, horizontal */
+  .exec{grid-template-columns:1fr;gap:0;}
+  .exec .stamp{order:-1;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:0 18px;text-align:left;padding:16px 18px;margin-bottom:22px;}
+  .stamp .big{grid-row:1 / span 2;font-size:52px;margin:0;}
+  .stamp .lbl{align-self:end;}
+  .stamp .unit{align-self:start;}
+  .stamp .focus{grid-column:1 / -1;margin-top:12px;}
+
+  /* matrix stacks */
+  .matrix{grid-template-columns:1fr;}
+  .cell{min-height:0;padding:15px 16px;}
+  .axes{display:none;}
+
+  /* quick wins stack: pain over tool */
+  .qw-row{flex-wrap:wrap;gap:4px 10px;padding:13px 2px;}
+  .qw-row .pain{flex:1 1 100%;}
+  .qw-row .to{display:none;}
+  .qw-row .tool{max-width:100%;text-align:left;color:var(--ink);}
+  .qw-row .tool::before{content:"→ ";color:var(--orange);font-family:var(--mono);}
+
+  /* tools */
+  .tool{padding:17px 16px;border-radius:0 10px 10px 0;}
+  .datastrip{gap:9px 20px;padding:10px 12px;}
+  .ruledout{padding:4px 16px;}
+
+  /* 4-day plan becomes cards */
+  table,thead,tbody,tr,td{display:block;width:100%;}
+  thead{display:none;}
+  tr{border:1px solid var(--rule);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#f7efe1;}
+  td{border:0;padding:3px 0;}
+  td.day{font-size:12px;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--amber);width:auto;}
+  td.day::after{content:"";}
+  td[data-l]::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:1px;}
+
+  /* ledger */
+  .led-row{flex-direction:column;gap:3px;padding:12px 15px;}
+  .led-row .v{font-size:15px;}
+  .led-row.total{flex-direction:row;justify-content:space-between;align-items:center;}
+
+  .formula{font-size:11px;}
+  .project{padding:16px 15px;}
+  .project .range{display:block;}
+  .foot{flex-direction:column;gap:6px;}
 }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <div class="sitebar">
-    <a class="back" href="/#assessment">← Chain Forge Labs</a>
-    <a class="cta" href="/#assessment">Book your assessment · $1,500 CAD</a>
-  </div>
+  <div class="sampleband"><b>SAMPLE REPORT</b> · Prairie Peak Exteriors is a fictional business. This report came out of our real process, run on a mock discovery call, so you can see exactly what you receive. The names and numbers are illustrative — the method is not.</div>
 
-  <div class="sampleband"><b>SAMPLE REPORT</b> · Prairie Peak Exteriors is a fictional business. This report was produced by our real process from a mock discovery call, so you can see exactly what you receive. The names and numbers are illustrative — the method is not.</div>
-
-  <!-- 1 · TITLE -->
   <header class="mast">
     <div class="brand">Chain Forge Labs</div>
     <h1>AI Tools Assessment</h1>
     <div class="client">Prairie Peak Exteriors</div>
     <div class="meta">
       <span>Prepared <b>July 20, 2026</b></span>
-      <span>Business <b>Landscaping & exterior maintenance</b></span>
+      <span>Business <b>Landscaping &amp; exterior maintenance</b></span>
       <span>Team <b>8</b></span>
       <span>Primary focus <b>Efficiency</b></span>
     </div>
   </header>
 
-  <!-- 2 · EXECUTIVE SUMMARY -->
+  <!-- 01 · EXEC -->
   <section>
     <div class="eyebrow">01 · Executive summary</div>
     <div class="exec">
       <div>
-        <h2>Where your week is going</h2>
+        <p class="headline">Seven hours a week, worth about <em>$2,900 a month</em> — and most of it is your evenings.</p>
+        <p>Six changes get it back. Three of them cost nothing, four take under ten minutes to set up, and one is a feature you already pay for and haven't switched on. Underneath them sits the real constraint — twenty years of quoting logic that lives only in your head — priced honestly in section 08.</p>
         <div class="drains">
-          <p><b>Evening quoting — six to eight hours a week of your own nights, and all of it lives in your head</b></p>
+          <p><b>Evening quoting — six to eight hours a week of your own nights</b></p>
           <p><b>Evening email — an hour to ninety minutes, seven nights a week</b></p>
         </div>
-        <p>Six changes, four of them under ten minutes to set up and three of them free, that hand back the majority of your evenings and stop the phone from routing work to your competitors.</p>
       </div>
       <div class="stamp">
-        <div class="lbl">Reclaimable hours identified</div>
+        <div class="lbl">Reclaimable</div>
         <div class="big">7</div>
         <div class="unit">hours / week</div>
         <div class="focus">Focus · Efficiency</div>
       </div>
     </div>
-    <!-- OPTIONAL: client's own rule / constraint honored throughout. Delete if none. -->
     <div class="rulebox">One thing shaped every recommendation here. You said it at the end of the call: <b>&ldquo;Simple, or the guys won&rsquo;t use it.&rdquo;</b> Nothing below asks a crew member to learn software, and nothing below asks you to enter data in a truck. That rule is why the CRM lasted three weeks, and it&rsquo;s the right rule.</div>
   </section>
 
-  <!-- 3 · EFFORT VS IMPACT -->
+  <!-- 02 · MATRIX -->
   <section>
     <div class="eyebrow">02 · How we prioritized</div>
     <h2>Effort vs. impact</h2>
@@ -231,14 +279,13 @@ ol.next li b{color:var(--ink);}
       <div class="cell qw">
         <div class="clbl">Quick wins · this report</div>
         <ul>
-          <!-- one <li> per quick-win label -->
           <li>Quote drafting speed</li>
           <li>Email triage &amp; payment chasing</li>
           <li>Missed calls · photos · reviews</li>
         </ul>
       </div>
       <div class="cell mp">
-        <div class="clbl">Major projects · section 06</div>
+        <div class="clbl">Major projects · section 08</div>
         <ul>
           <li>The quoting engine</li>
           <li>Same-day quote pipeline</li>
@@ -247,10 +294,10 @@ ol.next li b{color:var(--ink);}
       <div class="cell"><div class="clbl">Low impact · skipped</div><ul><li class="small">Crew scheduling software — your whiteboard works</li></ul></div>
       <div class="cell"><div class="clbl">Low impact · skipped</div><ul><li class="small">—</li></ul></div>
     </div>
-    <p class="matrix-note">Everything below is a quick win: sign up, set up, benefit — this week.</p>
+    <p class="matrix-note">Everything in the next section is a quick win: sign up, set up, benefit — this week.</p>
   </section>
 
-  <!-- 4 · QUICK WINS AT A GLANCE -->
+  <!-- 03 · GLANCE -->
   <section>
     <div class="eyebrow">03 · Quick wins at a glance</div>
     <h2>The pain → the fix</h2>
@@ -258,12 +305,12 @@ ol.next li b{color:var(--ink);}
     <div class="qw-row"><span class="pain">~6–8 hrs/week drafting quotes at night <span class="prov stated">STATED</span></span><span class="to">→</span><span class="tool">Claude voice-to-quote</span></div>
     <div class="qw-row"><span class="pain">Calls ringing out all afternoon</span><span class="to">→</span><span class="tool">Rosie</span></div>
     <div class="qw-row"><span class="pain">~7 hrs/week clearing email at night <span class="prov stated">STATED</span></span><span class="to">→</span><span class="tool">SaneBox</span></div>
-    <div class="qw-row"><span class="pain">~2 hrs/week chasing payments on Saturdays <span class="prov stated">STATED</span></span><span class="to">→</span><span class="tool">QuickBooks reminders — already paid for</span></div>
-    <div class="qw-row"><span class="pain">20-minute photo hunts, few times a week <span class="prov inferred">INFERRED</span></span><span class="to">→</span><span class="tool">Shared photo album — free</span></div>
+    <div class="qw-row"><span class="pain">~2 hrs/week chasing payments Saturdays <span class="prov stated">STATED</span></span><span class="to">→</span><span class="tool">QuickBooks reminders — free</span></div>
+    <div class="qw-row"><span class="pain">20-minute photo hunts, few times a week <span class="prov inferred">INFERRED</span></span><span class="to">→</span><span class="tool">Shared album — free</span></div>
     <div class="qw-row"><span class="pain">19 Google reviews vs. their 300</span><span class="to">→</span><span class="tool">Review link in invoices — free</span></div>
   </section>
 
-  <!-- 5 · RECOMMENDED SOLUTIONS -->
+  <!-- 04 · SOLUTIONS -->
   <section id="solutions">
     <div class="eyebrow">04 · Recommended solutions</div>
     <h2>What to use, what it costs, what it returns</h2>
@@ -279,7 +326,8 @@ ol.next li b{color:var(--ink);}
       <p><b>Why this one:</b> You already do the hard part standing on the property — deciding the number. Record a two-minute voice memo at the truck; get back a draft you edit in five minutes instead of writing in forty. It cuts the writing, not the judgment.</p>
       <p class="first">Next property you walk, record the voice memo before you drive away.</p>
     </article>
-<article class="tool">
+
+    <article class="tool">
       <h3>Rosie — AI phone answering</h3>
       <p class="solves">Solves: &ldquo;she called the business line three times one afternoon... voicemail all three.&rdquo;</p>
       <div class="datastrip">
@@ -287,10 +335,11 @@ ol.next li b{color:var(--ink);}
         <span><span class="k">Setup</span><b>~15 min</b></span>
         <span><span class="k">Saves</span><b>~0.75 hrs/wk</b><span class="prov inferred">INFERRED</span></span>
       </div>
-      <p><b>Why this one:</b> Trains itself off your website, answers 24/7, screens sales calls, texts you a summary. Built for trades. Watch the 250 min/mo cap in spring — next tier is US$149.</p>
+      <p><b>Why this one:</b> Trains itself off your website, answers 24/7, screens sales calls, texts you a summary. Built for trades. Watch the 250 min/mo cap in spring — the next tier is US$149.</p>
       <p class="first">Start the 7-day trial, then phone your own line and listen to what a customer hears.</p>
     </article>
-<article class="tool">
+
+    <article class="tool">
       <h3>SaneBox — email triage</h3>
       <p class="solves">Solves: &ldquo;an hour, hour and a half every single night, just cleaning it out.&rdquo;</p>
       <div class="datastrip">
@@ -298,10 +347,11 @@ ol.next li b{color:var(--ink);}
         <span><span class="k">Setup</span><b>5 min</b></span>
         <span><span class="k">Saves</span><b>~2 hrs/wk</b><span class="prov stated">STATED</span></span>
       </div>
-      <p><b>Why this one:</b> Works behind Gmail — no new app, no folders to maintain. The last two attempts failed because they asked you to change how you work. A very good filter, not an assistant.</p>
+      <p><b>Why this one:</b> Works behind Gmail — no new app, no folders to maintain. Your last two attempts failed because they asked you to change how you work. This is a very good filter, not an assistant.</p>
       <p class="first">14-day trial, connect the business Gmail, judge it on night three — not night one.</p>
     </article>
-<article class="tool">
+
+    <article class="tool">
       <h3>QuickBooks — automatic invoice reminders</h3>
       <p class="solves">Solves: &ldquo;I do it Saturday mornings with coffee... couple hours most Saturdays.&rdquo;</p>
       <div class="datastrip">
@@ -309,10 +359,11 @@ ol.next li b{color:var(--ink);}
         <span><span class="k">Setup</span><b>10 min</b></span>
         <span><span class="k">Saves</span><b>~1.5 hrs/wk</b><span class="prov stated">STATED</span></span>
       </div>
-      <p><b>Why this one:</b> Already sitting in the software you pay for monthly. Buying a separate tool for this would be paying twice.</p>
+      <p><b>Why this one:</b> Already sitting in the software you pay for every month, switched off. Buying a separate tool for this would be paying twice.</p>
       <p class="first">Reminder 1 at three days past due, Reminder 2 at fourteen — written in your voice.</p>
     </article>
-<article class="tool">
+
+    <article class="tool">
       <h3>One shared job-photo album</h3>
       <p class="solves">Solves: &ldquo;texting three different guys... scrolling through my camera roll for twenty minutes.&rdquo;</p>
       <div class="datastrip">
@@ -320,10 +371,11 @@ ol.next li b{color:var(--ink);}
         <span><span class="k">Setup</span><b>5 min</b></span>
         <span><span class="k">Saves</span><b>~0.75 hrs/wk</b><span class="prov inferred">INFERRED</span></span>
       </div>
-      <p><b>Why this one:</b> The smallest change that solves it — two taps, nothing to learn. If it doesn&rsquo;t stick, CompanyCam (~US$79/mo) files photos by GPS automatically; worth it if free fails, not before.</p>
+      <p><b>Why this one:</b> Two taps, nothing to learn, no account for the crew to create — which is the only reason it will survive where your last two systems didn&rsquo;t. The purpose-built alternative is in section 05, along with the exact point at which it becomes worth paying for.</p>
       <p class="first">Create the album, name it by street, text the join link to the crew.</p>
     </article>
-<article class="tool">
+
+    <article class="tool">
       <h3>Google review link in your invoice email</h3>
       <p class="solves">Solves: &ldquo;nineteen Google reviews and the big franchise guys have three hundred.&rdquo;</p>
       <div class="datastrip">
@@ -331,33 +383,60 @@ ol.next li b{color:var(--ink);}
         <span><span class="k">Setup</span><b>5 min</b></span>
         <span><span class="k">Saves</span><b>Lead flow — no hours claimed</b></span>
       </div>
-      <p><b>Why this one:</b> Every invoice already goes out by email; one line at the bottom asks for the review without you remembering to. Paid tools here aren&rsquo;t worth it until a free ask has run a full season.</p>
+      <p><b>Why this one:</b> Every invoice already goes out by email; one line at the bottom asks for the review without you remembering to. That&rsquo;s the whole fix.</p>
       <p class="first">Grab the review link from Google Business Profile, paste it into the invoice template.</p>
     </article>
 
-    <p class="stacktotal"><b>Total stack cost: ~$110/month CAD</b> — $0 required to start; three of the six are free. <span class="small">Tool prices verified July 2026.</span></p>
-
+    <p class="stacktotal"><b>Total stack cost: ~$110/month CAD.</b> Three of the six are free, one you already pay for, and $0 is required to start — the two paid tools both open with trials. <span class="small">Tool prices verified July 2026.</span></p>
   </section>
 
-  <!-- 6 · 4-DAY QUICK-START PLAN -->
+  <!-- 05 · RULED OUT -->
+  <section id="ruledout">
+    <div class="eyebrow">05 · What we ruled out</div>
+    <h2>The recommendations we didn&rsquo;t make</h2>
+    <p>Six tools got prescribed. Roughly forty didn&rsquo;t. These four are the ones you&rsquo;d most likely have been sold by someone else — here&rsquo;s why they aren&rsquo;t in section 04, and what would change our mind.</p>
+
+    <div class="ruledout">
+      <div class="ro">
+        <div class="rohead"><span class="roname">Jobber</span><span class="roprice">~$230/mo CAD</span></div>
+        <p>The standard answer for a landscaping company your size, and on paper it replaces four of your six pains at once. We left it out because of your own history: a CRM you abandoned after three weeks, email folders that didn&rsquo;t stick, and one rule stated plainly at the end of our call. A platform migration in your busiest season is the highest-risk thing you could do this year. <b>What would change our mind:</b> you raising it yourself, off-season, with your office lead driving the rollout — then it&rsquo;s a real conversation and we&rsquo;d help you scope it.</p>
+      </div>
+      <div class="ro">
+        <div class="rohead"><span class="roname">CompanyCam</span><span class="roprice">~$110/mo CAD, 3 seats</span></div>
+        <p>The right tool for the photo problem — it files by GPS automatically, so nobody has to remember anything. We put the free album first because a $110/month subscription for a 45-minute-a-week problem is a poor trade while a free option is untested. <b>What would change our mind:</b> if the album is half-empty a month from now, the discipline isn&rsquo;t there, and CompanyCam removes the need for it. That&rsquo;s the trigger — not a hunch.</p>
+      </div>
+      <div class="ro">
+        <div class="rohead"><span class="roname">NiceJob / Podium</span><span class="roprice">$105–$350/mo CAD</span></div>
+        <p>Review automation, and your review gap is real — nineteen against three hundred. But you have never once asked a customer for a review in a systematic way. Paying $105 a month to automate a request you&rsquo;ve never made is buying the second step first. <b>What would change our mind:</b> a full season of the free ask in your invoices, and a conversion rate worth automating.</p>
+      </div>
+      <div class="ro">
+        <div class="rohead"><span class="roname">Crew scheduling software</span><span class="roprice">$70–$210/mo CAD</span></div>
+        <p>You mentioned the whiteboard twice and never once complained about it. It works, the crews read it, and it costs nothing. Replacing a working system to make an assessment look thorough is how software gets bought and abandoned. <b>What would change our mind:</b> a third crew, or the day the whiteboard actually fails you.</p>
+      </div>
+    </div>
+
+    <p class="nocommission"><b>We take no commission, referral fee, or affiliate revenue from any tool named in this report.</b> That is why three of the six recommendations cost nothing and one was already sitting switched off inside software you own. Our incentive is that you implement, get the hours back, and come to us for the build in section 08 — not that you buy subscriptions.</p>
+  </section>
+
+  <!-- 06 · 4-DAY -->
   <section>
-    <div class="eyebrow">05 · Your 4-day quick-start plan</div>
+    <div class="eyebrow">06 · Your 4-day quick-start plan</div>
     <h2>Ten minutes a day, four days</h2>
     <table>
       <thead><tr><th>Day</th><th>Action (≤10 min)</th><th>Tool</th><th>What you'll notice</th></tr></thead>
       <tbody>
-        <tr><td class="day">1</td><td>Turn on automatic invoice reminders</td><td><b>QuickBooks</b></td><td>Saturday&rsquo;s chase list is shorter this week</td></tr>
-        <tr><td class="day">2</td><td>Start the trial, connect your Gmail</td><td><b>SaneBox</b></td><td>By night three the inbox pass is a third the size</td></tr>
-        <tr><td class="day">3</td><td>Start the trial, call your own business line</td><td><b>Rosie</b></td><td>The phone gets answered while you&rsquo;re on the mower</td></tr>
-        <tr><td class="day">4</td><td>Voice-memo one quote instead of typing it</td><td><b>Claude</b></td><td>A quote goes out same-day</td></tr>
+        <tr><td class="day">Day 1</td><td data-l="Action">Turn on automatic invoice reminders</td><td data-l="Tool"><b>QuickBooks</b></td><td data-l="You'll notice">Saturday&rsquo;s chase list is shorter this week</td></tr>
+        <tr><td class="day">Day 2</td><td data-l="Action">Start the trial, connect your Gmail</td><td data-l="Tool"><b>SaneBox</b></td><td data-l="You'll notice">By night three the inbox pass is a third the size</td></tr>
+        <tr><td class="day">Day 3</td><td data-l="Action">Start the trial, call your own business line</td><td data-l="Tool"><b>Rosie</b></td><td data-l="You'll notice">The phone gets answered while you&rsquo;re on the mower</td></tr>
+        <tr><td class="day">Day 4</td><td data-l="Action">Voice-memo one quote instead of typing it</td><td data-l="Tool"><b>Claude</b></td><td data-l="You'll notice">A quote goes out same-day</td></tr>
       </tbody>
     </table>
-    <p class="matrix-note">Four days, ~10 minutes each. This captures the majority of the value in this report.</p>
+    <p class="matrix-note">Four days, ~10 minutes each. This captures the majority of the value in this report. The album and the review link are two more five-minute jobs — they&rsquo;ll keep until next week.</p>
   </section>
 
-  <!-- 7 · FINANCIAL PICTURE -->
+  <!-- 07 · FINANCIAL -->
   <section id="financial">
-    <div class="eyebrow">06 · The financial picture</div>
+    <div class="eyebrow">07 · The financial picture</div>
     <h2>Shown work, conservative numbers</h2>
     <div class="formula">Net monthly ROI = ( hours/week × your rate × 4.33 ) − tool costs</div>
     <div class="ledger">
@@ -365,16 +444,16 @@ ol.next li b{color:var(--ink);}
       <div class="led-row"><span class="l">Your loaded rate (conservative default — adjust to yours)</span><span class="v">$100/hr</span></div>
       <div class="led-row"><span class="l">Gross monthly value</span><span class="v">$3,031</span></div>
       <div class="led-row"><span class="l">Total tool cost</span><span class="v">−$110/mo</span></div>
-      <div class="led-row total"><span class="l">Net monthly ROI</span><span class="v">~$2,900 CAD / mo</span></div>
+      <div class="led-row total"><span class="l">Net monthly ROI</span><span class="v">~$2,900 / mo</span></div>
     </div>
-    <p class="guarantee">These are identified hours — captured when the recommendations are implemented, by you or with us. Our guarantee covers the identification: 5+ hours/week found, or your $1,500 refunded.</p>
+    <p class="guarantee">Your hourly rate wasn&rsquo;t on the intake form, so we used $100/hr — deliberately low for an owner running $1.6M with eight staff. The real number moves this figure up, not down. These are identified hours, captured when the recommendations are implemented, by you or with us. Our guarantee covers the identification: 5+ hours/week found, or your $1,500 refunded.</p>
   </section>
 
-  <!-- 8 · MAJOR PROJECTS -->
+  <!-- 08 · PROJECTS -->
   <section id="projects">
-    <div class="eyebrow">07 · What comes after quick wins</div>
+    <div class="eyebrow">08 · What comes after quick wins</div>
     <h2>Major projects</h2>
-    <p>These came up on our call. No off-the-shelf tool solves them well — they're build projects. No obligation; you now know what they'd involve.</p>
+    <p>These came up on our call. No off-the-shelf tool solves them well — they&rsquo;re build projects. No obligation; you now know what they&rsquo;d involve.</p>
 
     <article class="project">
       <h3>The quoting engine</h3>
@@ -383,6 +462,7 @@ ol.next li b{color:var(--ink);}
       <p><b>Before final payment:</b> we run your last fifty real quotes through it and you see the scorecard — what matched, what didn&rsquo;t, what we fixed.</p>
       <span class="range">Honest range <b>$3,000–$5,000</b> · Typical timeline 3–4 weeks</span>
     </article>
+
     <article class="project">
       <h3>Same-day quote pipeline</h3>
       <p class="quote">&ldquo;In spring I&rsquo;m honestly a week, ten days behind on quotes sometimes.&rdquo;</p>
@@ -394,14 +474,14 @@ ol.next li b{color:var(--ink);}
     <div class="credit">Your $1,500 assessment is credited in full toward any of these within 90 days.</div>
   </section>
 
-  <!-- 9 · NEXT STEPS -->
+  <!-- 09 · NEXT -->
   <section>
-    <div class="eyebrow">08 · Next steps</div>
+    <div class="eyebrow">09 · Next steps</div>
     <h2>From report to reclaimed hours</h2>
     <ol class="next">
       <li>Run the 4-day quick-start plan.</li>
-      <li>Your review call is booked for <b>August 4, 2026</b> — bring questions and anything that didn't land.</li>
-      <li>If a major project is worth exploring, say so on the call and we'll scope it properly — <b>fixed price, underwritten before you commit</b>.</li>
+      <li>Your review call is booked for <b>August 4, 2026</b> — bring questions and anything that didn&rsquo;t land.</li>
+      <li>If a major project is worth exploring, say so on the call and we&rsquo;ll scope it properly — <b>fixed price, underwritten before you commit</b>.</li>
     </ol>
   </section>
 
@@ -409,10 +489,6 @@ ol.next li b{color:var(--ink);}
     <span><b>Chain Forge Labs</b> · AI Tools Assessment</span>
     <span>Sample · fictional client · July 2026</span>
   </footer>
-
-  <p class="book-cta" style="text-align:center;margin-top:28px;">
-    <a href="/#assessment" style="font-family:var(--body);font-size:14px;font-weight:600;background:var(--orange);color:#1a140a;text-decoration:none;padding:12px 18px;border-radius:9px;display:inline-block;">Ready to get yours? Book the assessment →</a>
-  </p>
 
 </div>
 </body>

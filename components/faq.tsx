@@ -18,7 +18,7 @@ const items: { q: string; a: ReactNode }[] = [
           href="/sample-report"
           className="text-brass hover:text-brass-bright underline underline-offset-2"
         >
-          See a sample report
+          Read a complete sample report
         </Link>
         .
       </>

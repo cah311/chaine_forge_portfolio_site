@@ -109,7 +109,7 @@ export function Process() {
               href="/sample-report"
               className="text-brass hover:text-brass-bright underline underline-offset-2 transition-colors"
             >
-              See a sample report ↗
+              Read a complete sample report ↗
             </a>
           </p>
         </Reveal>
