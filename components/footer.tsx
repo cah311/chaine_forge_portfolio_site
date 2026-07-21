@@ -33,6 +33,12 @@ export function Footer() {
               Terms
             </Link>
             <Link
+              href="/sample-report"
+              className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+            >
+              Sample report
+            </Link>
+            <Link
               href="/launchpad"
               className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
             >

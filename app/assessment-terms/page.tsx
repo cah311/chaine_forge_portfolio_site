@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   description:
     "AI Tools Assessment terms: 5 reclaimable hours guarantee, refund mechanics, 90-day build credit, and discovery call recording consent.",
   alternates: { canonical: "/assessment-terms" },
+  openGraph: {
+    title: `Assessment Engagement Terms — ${site.name}`,
+    description:
+      "AI Tools Assessment terms: 5 reclaimable hours guarantee, refund mechanics, 90-day build credit, and discovery call recording consent.",
+    url: "/assessment-terms",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Assessment Engagement Terms — ${site.name}`,
+    description:
+      "AI Tools Assessment terms: 5 reclaimable hours guarantee, refund mechanics, and 90-day build credit.",
+  },
 };
 
 const sections = [

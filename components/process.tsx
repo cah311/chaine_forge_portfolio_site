@@ -50,9 +50,13 @@ export function Process() {
             </h2>
           </Reveal>
           <Reveal>
-            <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[52ch] mx-auto mt-[18px]">
-              Everyone says &quot;use AI.&quot; We show you exactly where — then
-              build what the free tools can&apos;t.
+            <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[58ch] mx-auto mt-[18px]">
+              Here&apos;s the honest state of things: every business can buy
+              the same AI today. The tools aren&apos;t the edge anymore. The
+              edge is knowing exactly where they belong in your business, where
+              they don&apos;t, and what to build for the gaps the tools
+              can&apos;t reach. That&apos;s what the assessment finds — and
+              what we build.
             </p>
           </Reveal>
         </div>
@@ -99,6 +103,14 @@ export function Process() {
               $1,500 CAD — fully credited
             </b>{" "}
             toward any implementation booked within 90 days.
+          </p>
+          <p className="text-center mt-4 font-mono text-[13px]">
+            <a
+              href="/sample-report"
+              className="text-brass hover:text-brass-bright underline underline-offset-2 transition-colors"
+            >
+              See a sample report ↗
+            </a>
           </p>
         </Reveal>
       </div>

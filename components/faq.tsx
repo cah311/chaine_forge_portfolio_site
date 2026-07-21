@@ -7,7 +7,22 @@ import { Reveal } from "@/components/reveal";
 const items: { q: string; a: ReactNode }[] = [
   {
     q: "What exactly do I get for $1,500?",
-    a: "A 45-minute recorded discovery call, AI analysis of the transcript, a written report (executive summary, effort-vs-impact matrix, tool recommendations with cost/setup/time saved, a 4-day quick-start plan, ROI slide, and a major-projects quadrant), plus a 30-minute review call. Fully credited toward any implementation booked within 90 days.",
+    a: (
+      <>
+        A 45-minute recorded discovery call, AI analysis of the transcript, a
+        written report (executive summary, effort-vs-impact matrix, tool
+        recommendations with cost/setup/time saved, a 4-day quick-start plan,
+        ROI slide, and a major-projects quadrant), plus a 30-minute review call.
+        Fully credited toward any implementation booked within 90 days.{" "}
+        <Link
+          href="/sample-report"
+          className="text-brass hover:text-brass-bright underline underline-offset-2"
+        >
+          See a sample report
+        </Link>
+        .
+      </>
+    ),
   },
   {
     q: "What's the 5-hours guarantee, precisely?",

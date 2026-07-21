@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   description:
     "Whitelabel token launchpad on Avalanche / EVM — bonding curves, trading UI, wallet flows. Security-reviewed contract architecture. From $7,500 CAD.",
   alternates: { canonical: "/launchpad" },
+  openGraph: {
+    title: `Token Launchpad — ${site.name}`,
+    description:
+      "Whitelabel token launchpad on Avalanche / EVM — bonding curves, trading UI, wallet flows. From $7,500 CAD.",
+    url: "/launchpad",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Token Launchpad — ${site.name}`,
+    description:
+      "Whitelabel token launchpad on Avalanche / EVM. From $7,500 CAD.",
+  },
 };
 
 const inclusions = [

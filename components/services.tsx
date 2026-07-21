@@ -170,6 +170,43 @@ export function Services() {
           ))}
         </div>
 
+        <div className="grid grid-cols-1 min-[901px]:grid-cols-[1.55fr_1fr] gap-[22px] mt-[22px]">
+          <Reveal className="h-full">
+            <div className="border border-[rgba(200,164,92,0.4)] rounded-[14px] p-[34px] bg-gradient-to-b from-[rgba(200,164,92,0.06)] to-iron-raised h-full flex flex-col">
+              <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-brass mb-4">
+                Before you pay
+              </span>
+              <h3 className="font-display font-bold text-[1.55rem] leading-[1.15] tracking-[-0.015em] mb-4">
+                Tested against your real work — before the final invoice.
+              </h3>
+              <p className="text-smoke text-[15.5px] leading-relaxed">
+                Every custom build gets checked against your own history before
+                you pay the balance. If we build you a quoting tool, we run your
+                last fifty real quotes through it and show you the scorecard:
+                what matched, what didn&apos;t, and what we fixed. You
+                don&apos;t take our word that it works. You watch it work on
+                your own examples.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal className="h-full">
+            <div className="border border-hair rounded-[14px] p-[34px] bg-iron-raised h-full flex flex-col">
+              <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-brass mb-4">
+                Your tools stay
+              </span>
+              <h3 className="font-display font-bold text-[1.55rem] leading-[1.15] tracking-[-0.015em] mb-4">
+                We build on what you already use.
+              </h3>
+              <p className="text-smoke text-[15.5px] leading-relaxed">
+                If you run QuickBooks, Jobber, Gmail, or a spreadsheet that
+                works, we build on top of it — we don&apos;t rip it out. New
+                software is a last resort, not a sales strategy. The best build
+                is the one your team doesn&apos;t have to learn.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+
         <Reveal>
           <p className="font-mono text-xs text-smoke-dim text-center mt-8 max-w-[62ch] mx-auto leading-relaxed">
             Token launchpad and on-chain infra live on a{" "}

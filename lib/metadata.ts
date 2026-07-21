@@ -23,11 +23,20 @@ export const rootMetadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${site.name} — ${site.tagline}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -53,11 +62,20 @@ export function caseStudyMetadata(
       url: path,
       title: `${title} — ${site.name}`,
       description,
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${title} — ${site.name}`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} — ${site.name}`,
       description,
+      images: ["/opengraph-image"],
     },
   };
 }

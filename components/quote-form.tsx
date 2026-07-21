@@ -82,6 +82,20 @@ export function QuoteForm() {
                 ))}
               </ul>
             </Reveal>
+            <Reveal>
+              <Link
+                href="/sample-report"
+                className="mt-8 inline-flex items-center gap-[9px] font-semibold text-[15px] px-5 py-3 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass transition-all group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+              >
+                See a sample report
+                <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
+                  ↗
+                </span>
+              </Link>
+              <p className="font-mono text-[11.5px] text-smoke-dim mt-3 max-w-[36ch]">
+                Fictional client, real process — the artifact you receive.
+              </p>
+            </Reveal>
           </div>
 
           <Reveal>

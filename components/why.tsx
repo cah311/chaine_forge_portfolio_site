@@ -29,7 +29,7 @@ const cells = [
   {
     n: "06",
     title: "Written, underwritten delivery",
-    desc: "Capital-markets habits: written specs, disclosed pricing, audit-trail delivery. When we build, final payment is due only when it works as the spec says.",
+    desc: "Capital-markets habits: written specs, disclosed pricing, and a plain-English record of everything we ship. When we build, final payment is due only when it works as the spec says.",
   },
 ];
 
