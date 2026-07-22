@@ -19,6 +19,14 @@ export const site = {
   stripeAssessmentUrl:
     process.env.NEXT_PUBLIC_STRIPE_ASSESSMENT_URL ??
     "https://buy.stripe.com/bJe6oIddy8VUeOx2Hobo400",
+  /** Calendly — 45-min discovery (send after payment). */
+  bookingDiscoveryUrl:
+    process.env.NEXT_PUBLIC_BOOKING_DISCOVERY_URL ??
+    "https://calendly.com/hello-chainforgelabs/discovery",
+  /** Calendly — 30-min review (send after the report is ready). */
+  bookingReviewUrl:
+    process.env.NEXT_PUBLIC_BOOKING_REVIEW_URL ??
+    "https://calendly.com/hello-chainforgelabs/review",
 } as const;
 
 export const navLinks = [

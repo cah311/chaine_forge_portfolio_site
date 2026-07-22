@@ -4,6 +4,7 @@ import { useActionState, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { submitQuote } from "@/app/actions/quote";
+import { BookingCtas } from "@/components/booking-ctas";
 import { Reveal } from "@/components/reveal";
 import {
   industryOptions,
@@ -309,8 +310,8 @@ function PaySuccess({ msg }: { msg: string }) {
         Confirm with payment.
       </h3>
       <p className="text-smoke text-[15px] leading-relaxed max-w-[42ch]">
-        {msg} After checkout, we&apos;ll email you within two business days to
-        book discovery. Not a fit? We refund before work starts.
+        {msg} After checkout you&apos;ll land on a thank-you page to book your
+        45-minute discovery. Not a fit? We refund before work starts.
       </p>
       <label className="flex items-start gap-3 cursor-pointer text-[13.5px] text-smoke leading-relaxed">
         <input
@@ -354,6 +355,7 @@ function PaySuccess({ msg }: { msg: string }) {
           Pay {site.assessmentPrice} {site.currency} — lock your slot
         </button>
       )}
+      <BookingCtas variant="pay" />
       <p className="font-mono text-xs text-smoke-dim">
         Secure checkout via Stripe. Questions?{" "}
         <a
