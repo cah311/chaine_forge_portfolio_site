@@ -50,7 +50,7 @@ export function TimeLeakClient({ initialVariant }: Props) {
           {[
             "Instant headline score — hours/week + dollar range",
             "Full category breakdown after email",
-            `Then: the ${site.assessmentActivePrice} ${site.currency} assessment for the exact map + guarantee`,
+            `Then: the ${site.assessmentPrice} ${site.currency} assessment for the exact map + guarantee`,
           ].map((line) => (
             <li
               key={line}

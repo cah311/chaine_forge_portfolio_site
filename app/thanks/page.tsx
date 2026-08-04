@@ -28,7 +28,7 @@ export default function ThanksPage() {
             Book discovery next.
           </h1>
           <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch] mb-8">
-            Thanks for confirming your AI Tools Assessment ({site.assessmentActivePrice}{" "}
+            Thanks for confirming your AI Tools Assessment ({site.assessmentPrice}{" "}
             {site.currency}). Grab a 45-minute discovery slot — we&apos;ll record
             the call (per the{" "}
             <Link

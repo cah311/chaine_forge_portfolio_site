@@ -8,17 +8,17 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sample AI Tools Assessment",
-  description: `A complete sample assessment, start to finish — fictional landscaping company, real process. See exactly what ${site.assessmentActivePrice} ${site.currency} buys before you book.`,
+  description: `A complete sample assessment, start to finish — fictional landscaping company, real process. See exactly what ${site.assessmentPrice} ${site.currency} buys before you book.`,
   alternates: { canonical: "/sample-report" },
   openGraph: {
     title: `Sample AI Tools Assessment — ${site.name}`,
-    description: `A complete sample assessment, start to finish. Fictional client, real process. See exactly what ${site.assessmentActivePrice} ${site.currency} buys.`,
+    description: `A complete sample assessment, start to finish. Fictional client, real process. See exactly what ${site.assessmentPrice} ${site.currency} buys.`,
     url: "/sample-report",
   },
   twitter: {
     card: "summary_large_image",
     title: `Sample AI Tools Assessment — ${site.name}`,
-    description: `A complete sample assessment — fictional client, real process. ${site.assessmentActivePrice} ${site.currency}.`,
+    description: `A complete sample assessment — fictional client, real process. ${site.assessmentPrice} ${site.currency}.`,
   },
 };
 
@@ -147,7 +147,7 @@ export default function SampleReportPage() {
                   </p>
                   <p>
                     <b className="text-bone font-semibold">
-                      {site.assessmentActivePrice} {site.currency}, credited in full
+                      {site.assessmentPrice} {site.currency}, credited in full
                       against any build you commission within 90 days
                     </b>{" "}
                     — so if we end up doing the work, the assessment cost you
@@ -156,7 +156,7 @@ export default function SampleReportPage() {
                   <p>
                     <b className="text-bone font-semibold">
                       If we can&apos;t find at least 5 reclaimable hours a week,
-                      you get the full {site.assessmentActivePrice} back.
+                      you get the full {site.assessmentPrice} back.
                     </b>{" "}
                     In this sample we found seven. The average lands between five
                     and ten.

@@ -132,7 +132,7 @@ export function QuizResults({ email, score, answers }: Props) {
                 }
                 className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all group"
               >
-                Book the {site.assessmentActivePrice} {site.currency} assessment
+                Book the {site.assessmentPrice} {site.currency} assessment
                 <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
                   ↗
                 </span>

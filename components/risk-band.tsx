@@ -1,17 +1,10 @@
 import { Reveal } from "@/components/reveal";
 import { site } from "@/lib/site";
 
-const capacityCopy =
-  site.assessmentOfferTier === "founding"
-    ? `<b>Founding Five</b> — five slots at ${site.assessmentActivePrice}, then the price steps up. Every report is hand-built.`
-    : site.assessmentOfferTier === "second"
-      ? `<b>Next Five</b> — five slots at ${site.assessmentActivePrice}, then standing rate. Every report is hand-built.`
-      : `<b>8 assessment slots per month</b> — every report is hand-built, not templated spam.`;
-
 const rows = [
   {
     k: "GUARANTEE",
-    v: `We identify at least <b>5 reclaimable hours per week</b> — or your ${site.assessmentActivePrice} is refunded in full.`,
+    v: `We identify at least <b>5 reclaimable hours per week</b> — or your ${site.assessmentPrice} is refunded in full.`,
   },
   {
     k: "CREDITED",
@@ -23,7 +16,7 @@ const rows = [
   },
   {
     k: "CAPACITY",
-    v: capacityCopy,
+    v: "<b>8 assessment slots per month</b> — every report is hand-built, not templated spam.",
   },
   {
     k: "OWNERSHIP",

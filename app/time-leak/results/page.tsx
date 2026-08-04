@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Your Time-Leak Breakdown",
-  description: `Full Time-Leak Score breakdown and next step — the ${site.assessmentActivePrice} ${site.currency} AI Tools Assessment.`,
+  description: `Full Time-Leak Score breakdown and next step — the ${site.assessmentPrice} ${site.currency} AI Tools Assessment.`,
   robots: { index: false, follow: false },
 };
 

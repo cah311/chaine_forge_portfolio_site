@@ -5,13 +5,6 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/lib/site";
 
-const ladderNote =
-  site.assessmentOfferTier === "founding"
-    ? `Founding Five is ${site.assessmentActivePrice} ${site.currency} — five clients, then Next Five at ${site.assessmentSecondBatchPrice}, then standing ${site.assessmentPrice}.`
-    : site.assessmentOfferTier === "second"
-      ? `Next Five is ${site.assessmentActivePrice} ${site.currency} — five clients, then standing ${site.assessmentPrice}.`
-      : `Standing rate is ${site.assessmentPrice} ${site.currency}.`;
-
 const items: { q: string; a: ReactNode }[] = [
   {
     q: "Can I get a sense of fit before paying?",
@@ -38,7 +31,7 @@ const items: { q: string; a: ReactNode }[] = [
     ),
   },
   {
-    q: `What exactly do I get for ${site.assessmentActivePrice}?`,
+    q: `What exactly do I get for ${site.assessmentPrice}?`,
     a: (
       <>
         A 45-minute recorded discovery call, AI analysis of the transcript, a
@@ -46,7 +39,6 @@ const items: { q: string; a: ReactNode }[] = [
         recommendations with cost/setup/time saved, a 4-day quick-start plan,
         ROI slide, and a major-projects quadrant), plus a 30-minute review call.
         Fully credited toward any implementation booked within 90 days.{" "}
-        {ladderNote}{" "}
         <Link
           href="/sample-report"
           className="text-brass hover:text-brass-bright underline underline-offset-2"
@@ -63,7 +55,7 @@ const items: { q: string; a: ReactNode }[] = [
       <>
         We identify at least five reclaimable hours per week — opportunities that
         are real and actionable, not already implemented. If we can&apos;t, your{" "}
-        {site.assessmentActivePrice} is refunded in full. Full definitions, refund
+        {site.assessmentPrice} is refunded in full. Full definitions, refund
         mechanics, and recording consent are in the{" "}
         <Link
           href="/assessment-terms"
@@ -77,7 +69,7 @@ const items: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Who is this for?",
-    a: `Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a ${site.assessmentActivePrice} assessment. Most verticals are fair game. Advice-, wealth-, and healthcare-practice-adjacent firms are a natural long-term fit — we hold those on a shortlist while we sequence capacity, then circle back. Not a hard no.`,
+    a: `Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a ${site.assessmentPrice} assessment. Most verticals are fair game. Advice-, wealth-, and healthcare-practice-adjacent firms are a natural long-term fit — we hold those on a shortlist while we sequence capacity, then circle back. Not a hard no.`,
   },
   {
     q: "Do you only recommend tools you sell?",

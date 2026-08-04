@@ -52,9 +52,7 @@ export function nurtureSubject(id: NurtureStepId, ctx: NurtureContext): string {
     case "objections":
       return `"Can't I just ask ChatGPT?" — honest answer`;
     case "capacity":
-      return site.assessmentOfferTier === "founding"
-        ? "Founding Five slots are finite — and that's the point"
-        : "Assessment capacity this month";
+      return "Assessment capacity this month";
     case "last_nudge":
       return `Still leaking ~${formatCad(ctx.score.monthlyCostMid)}/mo?`;
   }
@@ -107,7 +105,7 @@ The free Time-Leak Score already showed you're likely leaving ${formatCad(ctx.sc
 
 ${ctx.assessmentUrl}
 
-Fee: ${site.assessmentActivePrice} ${site.currency}${site.assessmentOfferTier !== "standing" ? ` · ${site.assessmentTierLabel}` : ""}. Fully credited toward any build within 90 days.
+Fee: ${site.assessmentPrice} ${site.currency}. Fully credited toward any build within 90 days.
 
 — Chain Forge Labs`;
     case "capacity":
@@ -161,7 +159,7 @@ ${ctx.resultsUrl}
 
 Important: the free score only reveals that the leak exists and roughly how big it is. It does not tell you which tools to buy, what to build, or guarantee the hours back.
 
-That's the AI Tools Assessment (${site.assessmentActivePrice} ${site.currency}${site.assessmentOfferTier !== "standing" ? ` · ${site.assessmentTierLabel}` : ""}):
+That's the AI Tools Assessment (${site.assessmentPrice} ${site.currency}):
 • Exact map of where the hours hide
 • Tool recommendations with cost / setup / time saved
 • 4-day quick-start plan

@@ -29,13 +29,7 @@ const sections = [
     title: "What you're buying",
     body: (
       <>
-        A fixed-fee diagnostic — <strong>{site.assessmentActivePrice} {site.currency}</strong>
-        {site.assessmentOfferTier !== "standing" ? (
-          <>
-            {" "}
-            ({site.assessmentTierLabel}; standing rate {site.assessmentPrice})
-          </>
-        ) : null}{" "}
+        A fixed-fee diagnostic — <strong>{site.assessmentPrice} {site.currency}</strong>{" "}
         — delivered in four steps: a 45-minute recorded discovery call, an
         analysis of that conversation, a written report mapping your biggest
         time-drains to specific tools (with cost, setup time, and hours saved
@@ -51,7 +45,7 @@ const sections = [
       <>
         <strong>
           We will identify at least 5 reclaimable hours per week in your
-          business, or your {site.assessmentActivePrice} is refunded in full.
+          business, or your {site.assessmentPrice} is refunded in full.
         </strong>
         <br />
         <br />
@@ -71,7 +65,7 @@ const sections = [
       <>
         If your report identifies fewer than 5 reclaimable hours per week, you
         don&apos;t need to ask — we&apos;ll tell you, and refund the full{" "}
-        {site.assessmentActivePrice} within 10 business days. If you believe the
+        {site.assessmentPrice} within 10 business days. If you believe the
         identified hours don&apos;t hold up, email us within 14 days of the
         review call with the line items you dispute. We&apos;ll either show our
         math or refund you. No forms, no friction, no partial credits.
@@ -82,7 +76,7 @@ const sections = [
     title: "The credit",
     body: (
       <>
-        Your {site.assessmentActivePrice} is credited in full toward any
+        Your {site.assessmentPrice} is credited in full toward any
         implementation engagement booked within <strong>90 days</strong> of your
         review call. Our build prices are fixed and published — the price is the
         same number whether or not an assessment preceded it. The credit is a

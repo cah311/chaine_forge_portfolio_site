@@ -434,7 +434,7 @@ export function TimeLeakQuiz({ variant }: Props) {
 
               <p className="font-mono text-[11.5px] text-smoke-dim leading-relaxed">
                 By continuing you agree we may email your results and a short
-                sequence about the {site.assessmentActivePrice}{" "}
+                sequence about the {site.assessmentPrice}{" "}
                 {site.currency} AI Tools Assessment. Reply stop to opt out.
               </p>
             </form>

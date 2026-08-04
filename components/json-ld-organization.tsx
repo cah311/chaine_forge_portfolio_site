@@ -35,7 +35,7 @@ export function JsonLdOrganization() {
         offers: {
           "@type": "Offer",
           name: "AI Tools Assessment",
-          price: site.assessmentActivePriceAmount,
+          price: site.assessmentPriceAmount,
           priceCurrency: "CAD",
           url: absoluteUrl("/#assessment"),
           availability: "https://schema.org/LimitedAvailability",

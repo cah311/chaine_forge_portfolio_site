@@ -101,11 +101,7 @@ export function Process() {
           <p className="text-center mt-14 font-mono text-[13px] text-smoke">
             Delivered in ~2 weeks.{" "}
             <b className="text-brass font-semibold">
-              {site.assessmentActivePrice} {site.currency}
-              {site.assessmentOfferTier !== "standing"
-                ? ` · ${site.assessmentTierLabel}`
-                : ""}{" "}
-              — fully credited
+              {site.assessmentPrice} {site.currency} — fully credited
             </b>{" "}
             toward any implementation booked within 90 days.
           </p>
