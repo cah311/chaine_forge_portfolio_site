@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Reveal } from "@/components/reveal";
+import { site } from "@/lib/site";
 
 const steps = [
   {
@@ -100,7 +101,11 @@ export function Process() {
           <p className="text-center mt-14 font-mono text-[13px] text-smoke">
             Delivered in ~2 weeks.{" "}
             <b className="text-brass font-semibold">
-              $1,500 CAD — fully credited
+              {site.assessmentActivePrice} {site.currency}
+              {site.assessmentOfferTier !== "standing"
+                ? ` · ${site.assessmentTierLabel}`
+                : ""}{" "}
+              — fully credited
             </b>{" "}
             toward any implementation booked within 90 days.
           </p>

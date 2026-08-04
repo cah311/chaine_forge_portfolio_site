@@ -61,10 +61,18 @@ export function QuoteForm() {
             </Reveal>
             <Reveal>
               <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch]">
-                {site.assessmentPrice} {site.currency}. Built for teams of
-                roughly 2–20 with real manual workflows. Five reclaimable hours
-                a week identified, or a full refund — credited toward any build
-                within 90 days.
+                {site.assessmentActivePrice} {site.currency}
+                {site.assessmentOfferTier !== "standing"
+                  ? ` · ${site.assessmentTierLabel}`
+                  : ""}
+                . Built for teams of roughly 2–20 with real manual workflows.
+                Five reclaimable hours a week identified, or a full refund —
+                credited toward any build within 90 days.
+                {site.assessmentOfferTier === "founding"
+                  ? ` Then Next Five at ${site.assessmentSecondBatchPrice}, then standing ${site.assessmentPrice}.`
+                  : site.assessmentOfferTier === "second"
+                    ? ` Then standing ${site.assessmentPrice}.`
+                    : ""}
               </p>
             </Reveal>
             <Reveal>
@@ -341,7 +349,7 @@ function PaySuccess({ msg }: { msg: string }) {
           onClick={() => track("assessment_pay_clicked")}
           className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group"
         >
-          Pay {site.assessmentPrice} {site.currency} — lock your slot
+          Pay {site.assessmentActivePrice} {site.currency} — lock your slot
           <span className="transition-transform group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">
             ↗
           </span>
@@ -352,7 +360,7 @@ function PaySuccess({ msg }: { msg: string }) {
           disabled
           className="inline-flex items-center justify-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] opacity-40 cursor-not-allowed"
         >
-          Pay {site.assessmentPrice} {site.currency} — lock your slot
+          Pay {site.assessmentActivePrice} {site.currency} — lock your slot
         </button>
       )}
       <BookingCtas variant="pay" />

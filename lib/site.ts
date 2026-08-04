@@ -1,5 +1,41 @@
 const defaultUrl = "https://chainforgelabs.io";
 
+/**
+ * Assessment offer ladder (Founding Five → Next Five → standing):
+ * $500 (root 5) → $800 (root 8) → $1,500 (root 6).
+ * Flip via NEXT_PUBLIC_ASSESSMENT_TIER=founding|second|standing when a batch sells out.
+ */
+export type AssessmentOfferTier = "founding" | "second" | "standing";
+
+function resolveAssessmentTier(
+  raw: string | undefined,
+): AssessmentOfferTier {
+  if (raw === "second" || raw === "standing" || raw === "founding") return raw;
+  return "founding";
+}
+
+const assessmentOfferTier = resolveAssessmentTier(
+  process.env.NEXT_PUBLIC_ASSESSMENT_TIER,
+);
+
+const assessmentPrices = {
+  founding: "$500",
+  second: "$800",
+  standing: "$1,500",
+} as const;
+
+const assessmentPriceAmounts = {
+  founding: "500.00",
+  second: "800.00",
+  standing: "1500.00",
+} as const;
+
+const assessmentTierLabels = {
+  founding: "Founding Five",
+  second: "Next Five",
+  standing: "Standing rate",
+} as const;
+
 export const site = {
   name: "Chain Forge Labs",
   tagline: "Find where AI saves your business time — then build the rest",
@@ -9,13 +45,28 @@ export const site = {
   contactEmail: process.env.CONTACT_EMAIL ?? "hello@chainforgelabs.io",
   availability:
     process.env.AVAILABILITY ??
-    "8 assessment slots / month · hand-built reports",
+    (assessmentOfferTier === "founding"
+      ? "Founding Five · five slots at $500"
+      : assessmentOfferTier === "second"
+        ? "Next Five · five slots at $800"
+        : "8 assessment slots / month · hand-built reports"),
   githubOrg: process.env.GITHUB_ORG ?? "",
   resendFrom:
     process.env.RESEND_FROM ?? "Chain Forge <quotes@chainforgelabs.io>",
+  /** Standing rate after founding batches — root 6. */
   assessmentPrice: "$1,500",
+  assessmentFoundingPrice: "$500",
+  assessmentSecondBatchPrice: "$800",
+  assessmentOfferTier,
+  assessmentTierLabel: assessmentTierLabels[assessmentOfferTier],
+  /** Price currently charged on the public CTA. */
+  assessmentActivePrice: assessmentPrices[assessmentOfferTier],
+  assessmentActivePriceAmount: assessmentPriceAmounts[assessmentOfferTier],
   currency: "CAD",
-  /** Live Stripe Payment Link for the AI Tools Assessment ($1,500 CAD). */
+  /**
+   * Stripe Payment Link for the active assessment tier.
+   * While Founding Five is live, point NEXT_PUBLIC_STRIPE_ASSESSMENT_URL at the $500 link.
+   */
   stripeAssessmentUrl:
     process.env.NEXT_PUBLIC_STRIPE_ASSESSMENT_URL ??
     "https://buy.stripe.com/bJe6oIddy8VUeOx2Hobo400",
@@ -32,8 +83,7 @@ export const site = {
 export const navLinks = [
   { href: "/#assessment", label: "Assessment" },
   { href: "/#how-it-works", label: "How it works" },
-  { href: "/#build", label: "Build" },
-  { href: "/#concierge", label: "AI Concierge" },
+  { href: "/#paths", label: "Paths" },
   { href: "/#work", label: "Work" },
 ];
 

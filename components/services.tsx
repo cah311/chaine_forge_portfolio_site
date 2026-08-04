@@ -1,174 +1,138 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { site } from "@/lib/site";
+import { doors, offersForDoor, type OfferDoor } from "@/lib/pricing";
 import { Reveal } from "@/components/reveal";
 
-const services = [
-  {
-    name: "Quick Automation",
-    price: "From $1,950",
-    priceNote: " CAD",
-    time: "Days, not weeks",
-    desc: "A single workflow or integration that kills a recurring manual task — connected to the tools you already use.",
-    guar: "Scoped and priced in writing before work starts.",
-    bestfor: "↳ Best for: one painful process you want gone this month.",
-    feature: false,
-    badge: null,
-  },
-  {
-    name: "Knowledge System",
-    price: "$3,000–$3,500",
-    priceNote: " CAD",
-    time: "1–2 weeks",
-    desc: "Process redesign plus a custom GPT / knowledge base / SOP system your team actually uses — not another unused Notion wiki.",
-    guar: null,
-    bestfor: "↳ Best for: teams drowning in tribal knowledge and repeat questions.",
-    feature: false,
-    badge: null,
-  },
-  {
-    name: "Custom Claude Skills",
-    price: "$3,000–$5,000",
-    priceNote: " CAD",
-    time: "1–3 weeks",
-    desc: "A skill suite built with you — reusable AI workflows wired to your real processes, not generic prompts.",
-    guar: "Done-with-you sessions so your team can extend what we leave behind.",
-    bestfor: "↳ Best for: operators ready to productize how they work with AI.",
-    feature: true,
-    badge: "High leverage",
-  },
-  {
-    name: "Directory Platform",
-    price: "$5,500",
-    priceNote: " CAD",
-    time: "1–2 weeks",
-    desc: "Your own discovery platform: interactive maps, geo search, structured listings, ratings and reviews, user lists, and an admin panel — on a live engine you can inspect today.",
-    guar: "Built on a shipped product in our portfolio.",
-    bestfor: "↳ Best for: niche communities, associations, local media.",
-    feature: false,
-    badge: null,
-  },
-  {
-    name: "MVP Sprint",
-    price: "$9,500",
-    priceNote: " CAD",
-    time: "2–4 weeks",
-    desc: "A real working product: auth, payments, database, your core workflow, admin basics. Deploy, domain, analytics, handover, and 30 days of Care.",
-    guar: "The final 50% is only due when it ships working as the written spec says.",
-    bestfor: "↳ Best for: operators who need v1 shipped, not a 6-month agency.",
-    feature: true,
-    badge: "Flagship build",
-  },
-  {
-    name: "Care Retainer",
-    price: "$149 / $379 / $799",
-    priceNote: " CAD/mo",
-    time: "Ongoing · attaches to any shipped build",
-    desc: "Hosting, monitoring, fixes, and small tweaks so what we ship stays healthy. Three tiers by how hands-on you need us — priced so the smoothing layer is an easy yes at handover.",
-    guar: "Offered on every delivery email. Pause or cancel anytime.",
-    bestfor: "↳ Best for: teams that want the build maintained without hiring.",
-    feature: false,
-    badge: "Retainer",
-  },
-  {
-    name: "Sprint Subscription",
-    price: "$3,950",
-    priceNote: " CAD/mo",
-    time: "Ongoing · pause anytime",
-    desc: "Rolling build capacity. Unlimited request queue, one active build at a time, most requests shipped in 2–4 business days. Pause anytime; unused days bank.",
-    guar: null,
-    bestfor: "↳ Best for: post-launch teams that need continuous shipping without hiring.",
-    feature: false,
-    badge: null,
-  },
-];
+const ease = [0.2, 0.7, 0.3, 1] as const;
+
+function doorFromHash(hash: string): OfferDoor | null {
+  const id = hash.replace(/^#/, "");
+  if (id === "automate" || id === "build" || id === "maintain") return id;
+  return null;
+}
 
 export function Services() {
+  const [open, setOpen] = useState<OfferDoor | null>(null);
+  const reduce = useReducedMotion();
+
+  useEffect(() => {
+    const apply = () => {
+      const fromHash = doorFromHash(window.location.hash);
+      if (fromHash) setOpen(fromHash);
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
   return (
-    <section className="py-[120px] max-[900px]:py-[84px]" id="build">
+    <section className="py-[120px] max-[900px]:py-[84px]" id="paths">
       <div className="max-w-wrap mx-auto px-7 relative z-[2]">
         <div className="flex justify-between items-end gap-6 mb-[30px] flex-wrap">
           <div>
             <Reveal>
               <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-                Build
+                Three doors
               </span>
             </Reveal>
             <Reveal>
-              <h2
-                className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
-              >
-                When off-the-shelf
+              <h2 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]">
+                Automate. Build.
                 <br />
-                isn&apos;t enough.
+                Maintain.
               </h2>
             </Reveal>
           </div>
           <Reveal>
             <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[46ch] mt-[18px]">
-              The assessment&apos;s major-projects quadrant maps here. Fixed
-              price, fixed scope, your repo from day one. Assessment fee credited
-              in full if you book within 90 days.
+              Pick the job you need done. Details live one click deeper —
+              assessment fee credited in full toward any build booked within 90
+              days.
             </p>
           </Reveal>
         </div>
 
         <Reveal>
           <div className="flex justify-center mb-[46px]">
-            <span
-              className="font-mono text-[13px] text-smoke text-center border border-dashed border-hair-strong rounded-full px-[22px] py-[11px] inline-flex gap-2.5 items-center"
-            >
+            <span className="font-mono text-[13px] text-smoke text-center border border-dashed border-hair-strong rounded-full px-[22px] py-[11px] inline-flex gap-2.5 items-center">
               <i className="w-[7px] h-[7px] rounded-full bg-brass shadow-[0_0_8px_var(--brass)]" />
               {site.availability}
             </span>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 min-[901px]:grid-cols-2 gap-[22px] mt-2">
-          {services.map((svc) => (
-            <Reveal key={svc.name}>
-              <div
-                className={`border rounded-[14px] p-[30px] bg-iron-raised flex flex-col h-full transition-all duration-350 hover:-translate-y-1 hover:border-hair-strong relative ${
-                  svc.feature
-                    ? "border-[rgba(200,164,92,0.4)] bg-gradient-to-b from-[rgba(200,164,92,0.06)] to-iron-raised"
-                    : "border-hair"
-                }`}
-              >
-                {svc.badge && (
-                  <span
-                    className="absolute -top-px right-[22px] font-mono text-[10.5px] tracking-[0.12em] uppercase bg-brass text-[#1a140a] px-3 py-1.5 rounded-b-lg font-semibold"
-                  >
-                    {svc.badge}
-                  </span>
-                )}
-                <div className="flex flex-wrap justify-between items-baseline gap-x-3.5 gap-y-1 mb-1.5">
-                  <h3 className="font-display font-bold text-[1.4rem]">
-                    {svc.name}
-                  </h3>
-                  <span className="font-display font-bold text-2xl">
-                    <span className="whitespace-nowrap">{svc.price}</span>
-                    <small className="text-[0.8rem] text-smoke font-medium">
-                      {svc.priceNote}
-                    </small>
-                  </span>
-                </div>
-                <div className="font-mono text-xs text-brass mb-4">
-                  {svc.time}
-                </div>
-                <p className="text-smoke text-[14.5px] mb-4">{svc.desc}</p>
-                {svc.guar && (
-                  <div
-                    className="text-[13.5px] text-bone border-l-2 border-brass pl-3 mb-4 leading-normal"
-                  >
-                    {svc.guar}
+        <div className="grid grid-cols-1 min-[901px]:grid-cols-3 gap-[18px]">
+          {doors.map((door, i) => {
+            const isOpen = open === door.id;
+            return (
+              <Reveal key={door.id} delay={reduce ? 0 : i * 0.06}>
+                <button
+                  type="button"
+                  id={door.id}
+                  aria-expanded={isOpen}
+                  onClick={() => {
+                    const next = isOpen ? null : door.id;
+                    setOpen(next);
+                    if (typeof window !== "undefined") {
+                      window.history.replaceState(
+                        null,
+                        "",
+                        next ? `#${next}` : "#paths",
+                      );
+                    }
+                  }}
+                  className={`w-full text-left border rounded-[14px] p-[28px] min-[901px]:p-[32px] transition-all duration-350 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 group ${
+                    isOpen
+                      ? "border-[rgba(200,164,92,0.45)] bg-gradient-to-b from-[rgba(200,164,92,0.08)] to-iron-raised"
+                      : "border-hair bg-iron-raised hover:border-hair-strong hover:-translate-y-1"
+                  }`}
+                >
+                  <div className="flex items-baseline justify-between gap-3 mb-4">
+                    <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-brass">
+                      {String(i + 1).padStart(2, "0")} · {door.label}
+                    </span>
+                    <span
+                      className={`font-mono text-xl text-brass transition-transform duration-300 ${
+                        isOpen ? "rotate-45" : ""
+                      }`}
+                      aria-hidden
+                    >
+                      +
+                    </span>
                   </div>
-                )}
-                <div className="font-mono text-[11.5px] text-smoke-dim mt-auto pt-2">
-                  {svc.bestfor}
-                </div>
-              </div>
-            </Reveal>
-          ))}
+                  <h3 className="font-display font-bold text-[1.55rem] leading-[1.12] tracking-[-0.015em] mb-3">
+                    {door.headline}
+                  </h3>
+                  <p className="text-smoke text-[14.5px] leading-relaxed">
+                    {door.blurb}
+                  </p>
+                  <p className="font-mono text-[11.5px] text-smoke-dim mt-5 group-hover:text-brass transition-colors">
+                    {isOpen ? "Hide offers" : "See offers"} →
+                  </p>
+                </button>
+              </Reveal>
+            );
+          })}
         </div>
+
+        <AnimatePresence mode="wait">
+          {open && (
+            <motion.div
+              key={open}
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={reduce ? undefined : { opacity: 0, y: 8 }}
+              transition={{ duration: 0.35, ease }}
+              className="mt-[22px]"
+            >
+              <DoorOffers door={open} />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="grid grid-cols-1 min-[901px]:grid-cols-[1.55fr_1fr] gap-[22px] mt-[22px]">
           <Reveal className="h-full">
@@ -221,5 +185,60 @@ export function Services() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function DoorOffers({ door }: { door: OfferDoor }) {
+  const list = offersForDoor(door);
+  const meta = doors.find((d) => d.id === door);
+
+  return (
+    <div className="border border-hair rounded-[14px] overflow-hidden bg-iron-deep">
+      <div className="px-[28px] py-[18px] border-b border-hair flex flex-wrap items-baseline justify-between gap-3">
+        <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-brass">
+          {meta?.label} offers
+        </span>
+        <span className="font-mono text-[11.5px] text-smoke-dim">
+          Fixed price · fixed scope
+        </span>
+      </div>
+      <div className="grid grid-cols-1 min-[901px]:grid-cols-2 gap-px bg-hair">
+        {list.map((svc) => (
+          <div
+            key={svc.name}
+            className={`bg-iron-raised p-[28px] flex flex-col relative ${
+              svc.feature
+                ? "bg-gradient-to-b from-[rgba(200,164,92,0.06)] to-iron-raised"
+                : ""
+            }`}
+          >
+            {svc.badge && (
+              <span className="absolute top-0 right-[22px] font-mono text-[10.5px] tracking-[0.12em] uppercase bg-brass text-[#1a140a] px-3 py-1.5 rounded-b-lg font-semibold">
+                {svc.badge}
+              </span>
+            )}
+            <div className="flex flex-wrap justify-between items-baseline gap-x-3.5 gap-y-1 mb-1.5">
+              <h4 className="font-display font-bold text-[1.25rem]">{svc.name}</h4>
+              <span className="font-display font-bold text-[1.35rem]">
+                <span className="whitespace-nowrap">{svc.price}</span>
+                <small className="text-[0.75rem] text-smoke font-medium">
+                  {svc.priceNote}
+                </small>
+              </span>
+            </div>
+            <div className="font-mono text-xs text-brass mb-3.5">{svc.time}</div>
+            <p className="text-smoke text-[14.5px] mb-3.5">{svc.desc}</p>
+            {svc.guar && (
+              <div className="text-[13.5px] text-bone border-l-2 border-brass pl-3 mb-3.5 leading-normal">
+                {svc.guar}
+              </div>
+            )}
+            <div className="font-mono text-[11.5px] text-smoke-dim mt-auto pt-2">
+              {svc.bestfor}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

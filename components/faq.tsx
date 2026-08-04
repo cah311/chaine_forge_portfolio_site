@@ -3,10 +3,18 @@
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
+import { site } from "@/lib/site";
+
+const ladderNote =
+  site.assessmentOfferTier === "founding"
+    ? `Founding Five is ${site.assessmentActivePrice} ${site.currency} — five clients, then Next Five at ${site.assessmentSecondBatchPrice}, then standing ${site.assessmentPrice}.`
+    : site.assessmentOfferTier === "second"
+      ? `Next Five is ${site.assessmentActivePrice} ${site.currency} — five clients, then standing ${site.assessmentPrice}.`
+      : `Standing rate is ${site.assessmentPrice} ${site.currency}.`;
 
 const items: { q: string; a: ReactNode }[] = [
   {
-    q: "What exactly do I get for $1,500?",
+    q: `What exactly do I get for ${site.assessmentActivePrice}?`,
     a: (
       <>
         A 45-minute recorded discovery call, AI analysis of the transcript, a
@@ -14,6 +22,7 @@ const items: { q: string; a: ReactNode }[] = [
         recommendations with cost/setup/time saved, a 4-day quick-start plan,
         ROI slide, and a major-projects quadrant), plus a 30-minute review call.
         Fully credited toward any implementation booked within 90 days.{" "}
+        {ladderNote}{" "}
         <Link
           href="/sample-report"
           className="text-brass hover:text-brass-bright underline underline-offset-2"
@@ -29,9 +38,9 @@ const items: { q: string; a: ReactNode }[] = [
     a: (
       <>
         We identify at least five reclaimable hours per week — opportunities that
-        are real and actionable, not already implemented. If we can&apos;t, your
-        $1,500 is refunded in full. Full definitions, refund mechanics, and
-        recording consent are in the{" "}
+        are real and actionable, not already implemented. If we can&apos;t, your{" "}
+        {site.assessmentActivePrice} is refunded in full. Full definitions, refund
+        mechanics, and recording consent are in the{" "}
         <Link
           href="/assessment-terms"
           className="text-brass hover:text-brass-bright underline underline-offset-2"
@@ -44,7 +53,7 @@ const items: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Who is this for?",
-    a: "Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a $1,500 assessment. Most verticals are fair game. Advice-, wealth-, and healthcare-practice-adjacent firms are a natural long-term fit — we hold those on a shortlist while we sequence capacity, then circle back. Not a hard no.",
+    a: `Small businesses with roughly 2–20 employees, identifiable manual workflows, and budget for a ${site.assessmentActivePrice} assessment. Most verticals are fair game. Advice-, wealth-, and healthcare-practice-adjacent firms are a natural long-term fit — we hold those on a shortlist while we sequence capacity, then circle back. Not a hard no.`,
   },
   {
     q: "Do you only recommend tools you sell?",
@@ -52,11 +61,11 @@ const items: { q: string; a: ReactNode }[] = [
   },
   {
     q: "What happens after the assessment?",
-    a: "Three paths: run the quick wins yourself, book a fixed-price build from the major-projects quadrant (assessment fee credited), or move into the AI Concierge retainer for ongoing done-with-you skill building. No obligation on any of them.",
+    a: "Three doors: Automate (workflows, knowledge systems, Claude skills), Build (directories, MVPs), or Maintain (care retainers, sprint subscription, AI Concierge). Assessment fee credited toward any build. No obligation on any of them.",
   },
   {
     q: "How does AI Concierge work?",
-    a: "Two 45-minute Zoom working sessions per month building Claude skills with you, plus async access with a 12-business-hour SLA. Capped at 5–6 clients — real capacity, published openly. $1,800–$2,800 CAD/mo depending on scope.",
+    a: "Two 45-minute Zoom working sessions per month building Claude skills with you, plus async access with a 12-business-hour SLA. Capped at 5–6 clients — real capacity, published openly. $1,800–$2,800 CAD/mo depending on scope. Lives under Maintain.",
   },
   {
     q: "Who owns code if we build?",
@@ -81,9 +90,7 @@ export function Faq() {
             </span>
           </Reveal>
           <Reveal>
-            <h2
-              className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]"
-            >
+            <h2 className="font-display font-bold text-[clamp(2rem,4.2vw,3.2rem)] tracking-[-0.025em] leading-[1.02] mt-[18px]">
               The honest FAQ.
             </h2>
           </Reveal>
@@ -112,7 +119,7 @@ export function Faq() {
                   <div
                     className="overflow-hidden transition-[max-height] duration-400 ease-in-out"
                     style={{
-                      maxHeight: isOpen ? "500px" : "0",
+                      maxHeight: isOpen ? "640px" : "0",
                     }}
                   >
                     <p className="text-smoke text-[15.5px] pr-[30px] pb-[26px]">

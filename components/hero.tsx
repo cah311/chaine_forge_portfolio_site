@@ -134,9 +134,14 @@ export function Hero({ projects, meta }: HeroProps) {
 }
 
 function Eyebrow() {
+  const founding =
+    site.assessmentOfferTier === "founding" ||
+    site.assessmentOfferTier === "second";
   return (
     <span className="font-mono text-[12.5px] tracking-[0.22em] uppercase text-brass inline-flex items-center gap-2.5 before:content-[''] before:w-[22px] before:h-px before:bg-brass before:inline-block">
-      AI Tools Assessment · {site.assessmentPrice} {site.currency}
+      {founding
+        ? `${site.assessmentTierLabel} · ${site.assessmentActivePrice} ${site.currency}`
+        : `AI Tools Assessment · ${site.assessmentActivePrice} ${site.currency}`}
     </span>
   );
 }

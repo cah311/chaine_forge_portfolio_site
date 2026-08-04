@@ -8,20 +8,17 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sample AI Tools Assessment",
-  description:
-    "A complete sample assessment, start to finish — fictional landscaping company, real process. See exactly what $1,500 CAD buys before you book.",
+  description: `A complete sample assessment, start to finish — fictional landscaping company, real process. See exactly what ${site.assessmentActivePrice} ${site.currency} buys before you book.`,
   alternates: { canonical: "/sample-report" },
   openGraph: {
     title: `Sample AI Tools Assessment — ${site.name}`,
-    description:
-      "A complete sample assessment, start to finish. Fictional client, real process. See exactly what $1,500 CAD buys.",
+    description: `A complete sample assessment, start to finish. Fictional client, real process. See exactly what ${site.assessmentActivePrice} ${site.currency} buys.`,
     url: "/sample-report",
   },
   twitter: {
     card: "summary_large_image",
     title: `Sample AI Tools Assessment — ${site.name}`,
-    description:
-      "A complete sample assessment — fictional client, real process. $1,500 CAD.",
+    description: `A complete sample assessment — fictional client, real process. ${site.assessmentActivePrice} ${site.currency}.`,
   },
 };
 
@@ -150,7 +147,7 @@ export default function SampleReportPage() {
                   </p>
                   <p>
                     <b className="text-bone font-semibold">
-                      {site.assessmentPrice} {site.currency}, credited in full
+                      {site.assessmentActivePrice} {site.currency}, credited in full
                       against any build you commission within 90 days
                     </b>{" "}
                     — so if we end up doing the work, the assessment cost you
@@ -159,7 +156,7 @@ export default function SampleReportPage() {
                   <p>
                     <b className="text-bone font-semibold">
                       If we can&apos;t find at least 5 reclaimable hours a week,
-                      you get the full {site.assessmentPrice} back.
+                      you get the full {site.assessmentActivePrice} back.
                     </b>{" "}
                     In this sample we found seven. The average lands between five
                     and ten.
@@ -175,7 +172,7 @@ export default function SampleReportPage() {
                     Book your assessment ↗
                   </Link>
                   <Link
-                    href="/#build"
+                    href="/#paths"
                     className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
                   >
                     See what implementation costs

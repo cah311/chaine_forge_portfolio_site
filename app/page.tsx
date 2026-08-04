@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero";
 import { Process } from "@/components/process";
 import { RiskBand } from "@/components/risk-band";
 import { Services } from "@/components/services";
-import { Concierge } from "@/components/concierge";
 import { WorkGrid } from "@/components/work-grid";
 import { Marquee } from "@/components/marquee";
 import { Why } from "@/components/why";
@@ -25,7 +24,6 @@ export default async function Home() {
         <Process />
         <RiskBand />
         <Services />
-        <Concierge />
         <WorkGrid projects={homeProjects} meta={meta} />
         <Marquee />
         <Why />

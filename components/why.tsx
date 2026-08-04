@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { site } from "@/lib/site";
 
 const cells = [
   {
@@ -9,7 +10,11 @@ const cells = [
   {
     n: "02",
     title: "Paid assessment, not a free audit",
-    desc: "Paid diagnostics self-qualify and convert. $1,500 CAD filters tire-kickers, sits below the $2,500–$4,500 \"readiness\" band, and disappears entirely if you proceed to a build.",
+    desc: `Paid diagnostics self-qualify and convert. ${site.assessmentActivePrice} ${site.currency}${
+      site.assessmentOfferTier !== "standing"
+        ? ` (${site.assessmentTierLabel}; standing ${site.assessmentPrice})`
+        : ""
+    } filters tire-kickers, sits below the usual "readiness" band, and disappears entirely if you proceed to a build.`,
   },
   {
     n: "03",
@@ -19,7 +24,7 @@ const cells = [
   {
     n: "04",
     title: "Vertical-agnostic by design",
-    desc: "If you have 2–20 people, real workflows, and a budget for $1,500, we can assess you. A few verticals sit on a shortlist while we sequence capacity — not because they aren't a fit long term.",
+    desc: `If you have 2–20 people, real workflows, and a budget for ${site.assessmentActivePrice}, we can assess you. A few verticals sit on a shortlist while we sequence capacity — not because they aren't a fit long term.`,
   },
   {
     n: "05",
