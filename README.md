@@ -19,8 +19,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `RESEND_AUDIENCE_ID` or `RESEND_SEGMENT_ID` | Persist contacts in Resend |
 | `QUIZ_RESULT_SECRET` | HMAC for signed `/time-leak/results` links |
 | `LEADS_DIR` | Override local JSONL lead store path (defaults to `.data/`) |
-| `NEXT_PUBLIC_ASSESSMENT_TIER` | `founding` \| `second` \| `standing` |
-| `NEXT_PUBLIC_STRIPE_ASSESSMENT_URL` | Stripe Payment Link for the active tier |
+| `NEXT_PUBLIC_STRIPE_ASSESSMENT_URL` | Stripe Payment Link for the $1,500 assessment |
 
 Free front door: [`/time-leak`](http://localhost:3000/time-leak). Ad name split-test: `?v=a|b|c` (see `lib/quiz/ad-urls.ts`).
 

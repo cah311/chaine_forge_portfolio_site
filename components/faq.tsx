@@ -77,7 +77,7 @@ const items: { q: string; a: ReactNode }[] = [
   },
   {
     q: "What happens after the assessment?",
-    a: "Three doors: Automate (workflows, knowledge systems, Claude skills), Build (directories, MVPs), or Maintain (care retainers, sprint subscription, AI Concierge). Assessment fee credited toward any build. No obligation on any of them.",
+    a: "Don't pick a SKU cold. Three doors after the assessment: Automate (workflows, knowledge systems, Claude skills), Build (directories, MVPs), or Maintain (care retainers, sprint subscription, AI Concierge). The assessment names the one that fits — fee credited toward any build. No obligation.",
   },
   {
     q: "How does AI Concierge work?",
