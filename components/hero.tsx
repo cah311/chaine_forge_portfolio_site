@@ -19,6 +19,7 @@ export function Hero({ projects, meta }: HeroProps) {
 
   const headlineLines = [
     "Find 5+ hours a week",
+    "(worth ~$2–3k/mo)",
     "hiding in your business.",
     "Guaranteed — or it's free.",
   ];
@@ -159,10 +160,16 @@ function HeroCTAs() {
         </span>
       </Link>
       <Link
-        href="#how-it-works"
+        href="/time-leak"
         className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 max-[520px]:justify-center"
       >
-        See how it works
+        Free Time-Leak Score
+      </Link>
+      <Link
+        href="/sample-report"
+        className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-transparent text-smoke hover:text-brass transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2 max-[520px]:justify-center"
+      >
+        See sample report
       </Link>
     </div>
   );

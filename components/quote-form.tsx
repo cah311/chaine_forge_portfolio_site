@@ -6,6 +6,7 @@ import { track } from "@vercel/analytics";
 import { submitQuote } from "@/app/actions/quote";
 import { BookingCtas } from "@/components/booking-ctas";
 import { Reveal } from "@/components/reveal";
+import { readAttribution } from "@/lib/analytics";
 import {
   industryOptions,
   interestOptions,
@@ -27,6 +28,24 @@ export function QuoteForm() {
     outcome: null,
   });
   const trackedSubmit = useRef(false);
+  const [attr, setAttr] = useState({
+    utmSource: "",
+    utmMedium: "",
+    utmCampaign: "",
+    referrer: "",
+  });
+
+  useEffect(() => {
+    const a = readAttribution();
+    setAttr({
+      utmSource: a.utmSource ?? "",
+      utmMedium: a.utmMedium ?? "",
+      utmCampaign: a.utmCampaign ?? "",
+      referrer:
+        a.referrer ??
+        (typeof document !== "undefined" ? document.referrer : ""),
+    });
+  }, []);
 
   useEffect(() => {
     if (state.ok && state.outcome && !trackedSubmit.current) {
@@ -104,6 +123,12 @@ export function QuoteForm() {
               <p className="font-mono text-[11.5px] text-smoke-dim mt-3 max-w-[36ch]">
                 Fictional client, real process — the entire deliverable.
               </p>
+              <Link
+                href="/time-leak"
+                className="mt-4 inline-flex items-center gap-[9px] font-semibold text-[14.5px] text-smoke hover:text-brass transition-colors"
+              >
+                Not ready? Free Time-Leak Score →
+              </Link>
             </Reveal>
           </div>
 
@@ -116,6 +141,14 @@ export function QuoteForm() {
               <NurtureSize msg={state.msg} />
             ) : (
               <form action={action} className="grid gap-4">
+                <input type="hidden" name="utmSource" value={attr.utmSource} />
+                <input type="hidden" name="utmMedium" value={attr.utmMedium} />
+                <input
+                  type="hidden"
+                  name="utmCampaign"
+                  value={attr.utmCampaign}
+                />
+                <input type="hidden" name="referrer" value={attr.referrer} />
                 <div>
                   <p className={labelClass}>
                     Name three manual workflows that eat your week

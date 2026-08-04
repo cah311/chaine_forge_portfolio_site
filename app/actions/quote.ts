@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+import { persistLead } from "@/lib/leads";
 import {
   classifyQualification,
   type QualificationOutcome,
@@ -27,6 +28,10 @@ export async function submitQuote(
   const interest = String(fd.get("sku") ?? "").trim();
   const timeline = String(fd.get("timeline") ?? "").trim();
   const links = String(fd.get("links") ?? "").trim();
+  const utmSource = String(fd.get("utmSource") ?? "").trim() || undefined;
+  const utmMedium = String(fd.get("utmMedium") ?? "").trim() || undefined;
+  const utmCampaign = String(fd.get("utmCampaign") ?? "").trim() || undefined;
+  const referrer = String(fd.get("referrer") ?? "").trim() || undefined;
 
   if (!w1 || !w2 || !w3) {
     return {
@@ -61,6 +66,28 @@ export async function submitQuote(
         : "NURTURE — outside 2–20 ICP";
 
   try {
+    await persistLead({
+      email,
+      source: "assessment_form",
+      outcome,
+      industry,
+      teamSize,
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      referrer,
+      tags: [tag],
+      notifyOwnerEmail: false,
+      notifyExtra: `Interest: ${interest}
+Timeline: ${timeline}
+Revenue: ${revenue}
+Links: ${links || "—"}
+Workflows:
+1. ${w1}
+2. ${w2}
+3. ${w3}`,
+    });
+
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: site.resendFrom,
@@ -77,6 +104,8 @@ Revenue: ${revenue}
 Interest: ${interest}
 Timeline: ${timeline}
 Links: ${links || "—"}
+UTM: ${utmSource ?? "—"} / ${utmMedium ?? "—"} / ${utmCampaign ?? "—"}
+Referrer: ${referrer ?? "—"}
 
 Manual workflows:
 1. ${w1}

@@ -172,6 +172,12 @@ export default function SampleReportPage() {
                     Book your assessment ↗
                   </Link>
                   <Link
+                    href="/time-leak"
+                    className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+                  >
+                    Free Time-Leak Score
+                  </Link>
+                  <Link
                     href="/#paths"
                     className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
                   >

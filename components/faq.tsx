@@ -14,6 +14,30 @@ const ladderNote =
 
 const items: { q: string; a: ReactNode }[] = [
   {
+    q: "Can I get a sense of fit before paying?",
+    a: (
+      <>
+        Yes. Start with the free{" "}
+        <Link
+          href="/time-leak"
+          className="text-brass hover:text-brass-bright underline underline-offset-2"
+        >
+          Time-Leak Score
+        </Link>{" "}
+        (about 3 minutes) for hours/week + a dollar range. Or read a{" "}
+        <Link
+          href="/sample-report"
+          className="text-brass hover:text-brass-bright underline underline-offset-2"
+        >
+          complete sample assessment
+        </Link>{" "}
+        — fictional client, real process, nothing held back. The paid assessment
+        is the exact map + guarantee, not a more personalized version of the
+        free score.
+      </>
+    ),
+  },
+  {
     q: `What exactly do I get for ${site.assessmentActivePrice}?`,
     a: (
       <>

@@ -109,12 +109,18 @@ export function Process() {
             </b>{" "}
             toward any implementation booked within 90 days.
           </p>
-          <p className="text-center mt-4 font-mono text-[13px]">
+          <p className="text-center mt-4 font-mono text-[13px] flex flex-wrap gap-x-4 gap-y-2 justify-center">
             <a
               href="/sample-report"
               className="text-brass hover:text-brass-bright underline underline-offset-2 transition-colors"
             >
               Read a complete sample report ↗
+            </a>
+            <a
+              href="/time-leak"
+              className="text-smoke hover:text-brass underline underline-offset-2 transition-colors"
+            >
+              Or get a free Time-Leak Score →
             </a>
           </p>
         </Reveal>

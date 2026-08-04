@@ -40,7 +40,7 @@ export const site = {
   name: "Chain Forge Labs",
   tagline: "Find where AI saves your business time — then build the rest",
   description:
-    "A fixed-fee AI Tools Assessment maps your biggest time-drains to the right tools — with a 5-hours-a-week guarantee. Then we build what off-the-shelf can't. Credited in full if you build with us.",
+    "Free Time-Leak Score in 3 minutes, then a fixed-fee AI Tools Assessment that maps your biggest time-drains to the right tools — with a 5-hours-a-week guarantee. Credited in full if you build with us.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? defaultUrl,
   contactEmail: process.env.CONTACT_EMAIL ?? "hello@chainforgelabs.io",
   availability:
@@ -81,6 +81,7 @@ export const site = {
 } as const;
 
 export const navLinks = [
+  { href: "/time-leak", label: "Free score" },
   { href: "/#assessment", label: "Assessment" },
   { href: "/#how-it-works", label: "How it works" },
   { href: "/#paths", label: "Paths" },

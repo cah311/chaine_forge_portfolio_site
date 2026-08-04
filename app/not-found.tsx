@@ -15,15 +15,21 @@ export default function NotFound() {
             This page doesn&apos;t exist.
           </h1>
           <p className="text-smoke text-[clamp(1.05rem,1.7vw,1.25rem)] max-w-[42ch] mb-9">
-            The link may be old, or the page moved. The assessment is still the
-            front door.
+            The link may be old, or the page moved. Start with the free
+            Time-Leak Score — or book the assessment directly.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/#assessment"
+              href="/time-leak"
               className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] bg-brass text-[#1a140a] hover:bg-brass-bright hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
             >
-              Book your assessment ↗
+              Free Time-Leak Score ↗
+            </Link>
+            <Link
+              href="/#assessment"
+              className="inline-flex items-center gap-[9px] font-semibold text-[15px] px-6 py-3.5 rounded-[11px] border border-hair-strong text-bone hover:border-brass hover:text-brass transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+            >
+              Book assessment
             </Link>
             <Link
               href="/"

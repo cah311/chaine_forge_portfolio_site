@@ -7,8 +7,10 @@ import { WorkGrid } from "@/components/work-grid";
 import { Marquee } from "@/components/marquee";
 import { Why } from "@/components/why";
 import { Faq } from "@/components/faq";
+import { QuizCtaBand } from "@/components/quiz/quiz-cta-band";
 import { QuoteForm } from "@/components/quote-form";
 import { Footer } from "@/components/footer";
+import { AttributionCapture } from "@/components/attribution-capture";
 import { getHomeProjects } from "@/lib/projects";
 import { getAllRepoMeta } from "@/lib/github";
 
@@ -18,6 +20,7 @@ export default async function Home() {
 
   return (
     <>
+      <AttributionCapture />
       <Nav />
       <main>
         <Hero projects={homeProjects} meta={meta} />
@@ -28,6 +31,7 @@ export default async function Home() {
         <Marquee />
         <Why />
         <Faq />
+        <QuizCtaBand />
         <QuoteForm />
       </main>
       <Footer />

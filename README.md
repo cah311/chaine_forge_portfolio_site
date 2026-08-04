@@ -11,6 +11,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+### Funnel env (optional but recommended)
+
+| Variable | Purpose |
+|---|---|
+| `RESEND_API_KEY` | Quiz results + nurture sequence + quote notifications |
+| `RESEND_AUDIENCE_ID` or `RESEND_SEGMENT_ID` | Persist contacts in Resend |
+| `QUIZ_RESULT_SECRET` | HMAC for signed `/time-leak/results` links |
+| `LEADS_DIR` | Override local JSONL lead store path (defaults to `.data/`) |
+| `NEXT_PUBLIC_ASSESSMENT_TIER` | `founding` \| `second` \| `standing` |
+| `NEXT_PUBLIC_STRIPE_ASSESSMENT_URL` | Stripe Payment Link for the active tier |
+
+Free front door: [`/time-leak`](http://localhost:3000/time-leak). Ad name split-test: `?v=a|b|c` (see `lib/quiz/ad-urls.ts`).
+
 ## Logo
 
 The mark is a **blacksmith's touchmark** — the kind of stamp a forge punches into hot metal to claim ownership. That framing drove every decision: one symbol, heavy geometry, no decoration, built to read at favicon size.

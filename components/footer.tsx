@@ -21,6 +21,12 @@ export function Footer() {
               </Link>
             ))}
             <Link
+              href="/time-leak"
+              className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
+            >
+              Free score
+            </Link>
+            <Link
               href="/#assessment"
               className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
             >
@@ -37,12 +43,6 @@ export function Footer() {
               className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
             >
               Sample report
-            </Link>
-            <Link
-              href="/launchpad"
-              className="hover:text-brass transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2"
-            >
-              Launchpad
             </Link>
           </div>
           <div className="font-mono text-[12.5px] text-smoke-dim">

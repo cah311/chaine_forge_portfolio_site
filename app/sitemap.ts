@@ -13,16 +13,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: absoluteUrl("/time-leak"),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: absoluteUrl("/sample-report"),
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: absoluteUrl("/launchpad"),
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.9,
     },
     {
       url: absoluteUrl("/assessment-terms"),
@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    // /launchpad intentionally omitted from sitemap — siloed Web3 offer.
     ...projects.map((project) => ({
       url: absoluteUrl(`/work/${project.slug}`),
       lastModified: now,
