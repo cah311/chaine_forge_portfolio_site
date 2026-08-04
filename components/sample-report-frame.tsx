@@ -47,7 +47,7 @@ export function SampleReportFrame() {
       ref={ref}
       src="/sample-report.html"
       title="Sample AI Tools Assessment report for Prairie Peak Exteriors"
-      className="w-full border border-hair rounded-[14px] bg-[#f4ead9] block overflow-hidden"
+      className="w-full border border-hair rounded-[14px] bg-white block overflow-hidden"
       style={{ height }}
     />
   );
